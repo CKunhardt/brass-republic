@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - BlockingLayer
   - 
   - 
   - 
@@ -40,4 +41,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 3203030231
+    locked: 0
+  - name: WallsBG
+    uniqueID: 3910661467
+    locked: 0
+  - name: Entities
+    uniqueID: 3243608619
+    locked: 0
+  - name: WallsFG
+    uniqueID: 2488568645
     locked: 0
