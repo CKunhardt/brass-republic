@@ -123,7 +123,6 @@ GameObject:
   - component: {fileID: 16733457}
   - component: {fileID: 16733455}
   - component: {fileID: 16733454}
-  - component: {fileID: 16733456}
   m_Layer: 5
   m_Name: Neighbour 2
   m_TagString: Untagged
@@ -200,24 +199,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
---- !u!114 &16733456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 16733453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Neighbour 2
-    sentences:
-    - '... oh my, I see.'
-    - I just heard a knock. I think there're outside.
-    - OK, I won't answer...
-    - 
 --- !u!224 &16733457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -226,14 +207,14 @@ RectTransform:
   m_GameObject: {fileID: 16733453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
-  m_Father: {fileID: 657962863}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3735200, y: -1883840}
+  m_AnchoredPosition: {x: 11207612, y: 5652535}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &55173503
@@ -538,6 +519,7 @@ GameObject:
   - component: {fileID: 528948822}
   - component: {fileID: 528948821}
   - component: {fileID: 528948820}
+  - component: {fileID: 528948819}
   m_Layer: 5
   m_Name: NEIGHBOUR 2
   m_TagString: Untagged
@@ -564,6 +546,24 @@ RectTransform:
   m_AnchoredPosition: {x: 500, y: 400}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &528948819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 528948817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Neighbour 2
+    sentences:
+    - '... oh my, I see.'
+    - I just heard a knock. I think there're outside.
+    - OK, I won't answer...
+    - 
 --- !u!114 &528948820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 528948819}
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
@@ -660,6 +660,7 @@ GameObject:
   - component: {fileID: 552489942}
   - component: {fileID: 552489941}
   - component: {fileID: 552489940}
+  - component: {fileID: 552489939}
   m_Layer: 5
   m_Name: NEIGHBOUR 1
   m_TagString: Untagged
@@ -686,6 +687,25 @@ RectTransform:
   m_AnchoredPosition: {x: -500, y: 400}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &552489939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 552489937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Neighbour 1
+    sentences:
+    - Hi, Player! Would you like a cookie? George and I just made some.
+    - '... Your parents? They weren''t there when you woke up this morning?'
+    - '...'
+    - SLAM
+    - 
 --- !u!114 &552489940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,7 +745,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 552489939}
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
@@ -901,11 +921,9 @@ RectTransform:
   m_Children:
   - {fileID: 552489938}
   - {fileID: 528948818}
-  - {fileID: 1837648823}
-  - {fileID: 16733457}
   - {fileID: 1620556110}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1725,7 +1743,7 @@ Transform:
   - {fileID: 730689241}
   - {fileID: 976906871}
   m_Father: {fileID: 657962863}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1620556111
 SpriteRenderer:
@@ -1802,7 +1820,7 @@ RectTransform:
   m_Children:
   - {fileID: 2145615609}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1922,7 +1940,6 @@ GameObject:
   - component: {fileID: 1837648821}
   - component: {fileID: 1837648820}
   - component: {fileID: 1837648822}
-  - component: {fileID: 1837648824}
   m_Layer: 5
   m_Name: Neighbour 1
   m_TagString: Untagged
@@ -2048,35 +2065,16 @@ RectTransform:
   m_GameObject: {fileID: 1837648819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
-  m_Father: {fileID: 657962863}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2012.5, y: -1015}
+  m_AnchoredPosition: {x: 8050, y: 4060}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1837648824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1837648819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Neighbour 1
-    sentences:
-    - Hi, Player! Would you like a cookie? George and I just made some.
-    - '... Your parents? They weren''t there when you woke up this morning?'
-    - '...'
-    - SLAM
-    - 
 --- !u!1 &1999785615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,7 +2135,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2145615608
 GameObject:
