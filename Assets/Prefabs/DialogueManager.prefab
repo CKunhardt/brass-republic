@@ -53,3 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 0}
   dialogueText: {fileID: 0}
+  dialogBox: {fileID: 0}

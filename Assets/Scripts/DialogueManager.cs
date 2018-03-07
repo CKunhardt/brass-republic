@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public GameObject dialogBox;
 
     private Queue<string> sentences;
 
@@ -47,7 +48,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Debug.Log("End of conversation.");
+        dialogBox.SetActive(false);
     }
 
 

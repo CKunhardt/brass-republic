@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/TestScene.unity
+    guid: 1bb0c995abbe6d14695b485a85902bf2
+  - enabled: 1
+    path: Assets/EngineCar.unity
+    guid: f36ee2092d7c6de4d979d968240fe695
+  - enabled: 1
+    path: Assets/SleeperCar.unity
+    guid: e4620bff6e717084390744fd7c13025f

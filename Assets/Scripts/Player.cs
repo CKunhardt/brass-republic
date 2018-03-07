@@ -10,6 +10,7 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	protected void Start () {
+		DontDestroyOnLoad(this);
 		rb2D = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 	}
@@ -18,6 +19,15 @@ public class Player : MonoBehaviour {
 	{
 		Vector2 newPos = new Vector2(xDir, yDir);
 		rb2D.MovePosition(rb2D.position + newPos * moveSpeed);
+	}
+
+	public void SetPosition (Vector2 newPos)
+	{
+		//GetComponent<Collider2D>().enabled = false;
+		rb2D.position = newPos;
+		//GetComponent<Collider2D>().enabled = true;
+
+		Debug.Log("New position: " + rb2D.position.x + ", " + rb2D.position.y);
 	}
 
 	
