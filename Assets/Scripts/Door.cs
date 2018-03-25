@@ -9,7 +9,7 @@ public class Door : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (target.tag == "NPC") {
+		if (target.tag == "NPC" && other.tag == "Player") {
 			DialogueTrigger dTrig = target.GetComponent<DialogueTrigger>();
 			dialogueBox.SetActive(true);
 			dTrig.TriggerDialogue();

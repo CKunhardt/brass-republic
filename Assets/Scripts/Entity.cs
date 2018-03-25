@@ -7,6 +7,7 @@ public abstract class Entity : MonoBehaviour {
 	protected Rigidbody2D rb2D;
 	protected Animator anim;
 	protected float moveSpeed = 0.1f;
+	protected int horizontal, vertical;
 
 	protected void Move (int xDir, int yDir)
 	{
@@ -18,5 +19,10 @@ public abstract class Entity : MonoBehaviour {
 	{
 		rb2D.position = newPos;
 		Debug.Log("New position: " + rb2D.position.x + ", " + rb2D.position.y);
+	}
+
+	protected void fixFlying ()
+	{
+		rb2D.velocity = Vector2.zero;
 	}
 }

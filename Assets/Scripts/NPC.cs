@@ -2,22 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Entity {
+public class NPC : Entity {
+
+	int framebuffer;
 
 	// Use this for initialization
-	protected void Start () {
-		DontDestroyOnLoad(this);
+	void Start () {
 		rb2D = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
+		framebuffer = 0;
 		horizontal = 0;
 		vertical = 0;
+
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		horizontal = (int)Input.GetAxisRaw ("Horizontal");
-		vertical = (int)Input.GetAxisRaw ("Vertical");
+
+		framebuffer++;
+
+		if (framebuffer == 10) {
+
+			horizontal = (int)Mathf.Floor (Random.Range (-1, 2));
+			vertical = (int)Mathf.Floor (Random.Range (-1, 2));
+
+			framebuffer = 0;
+		}
 
 		if (horizontal != 0)
 			vertical = 0;
@@ -32,6 +43,7 @@ public class Player : Entity {
 			fixFlying();
 		}
 
-	}
 
+		
+	}
 }
