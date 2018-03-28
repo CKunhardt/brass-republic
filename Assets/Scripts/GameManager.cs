@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager> {
 	protected GameManager () {} // guarantee this will be always a singleton only - can't use the constructor!
  
-	public Vector2 nextPosition;
+	public string spawnerName;
  
 	void Awake () {
 		// Your initialization code here
@@ -15,8 +15,8 @@ public class GameManager : Singleton<GameManager> {
 
 	void OnSceneLoaded (Scene scene, LoadSceneMode mode)
 	{
-		Debug.Log("Setting position: " + nextPosition.x + ", " + nextPosition.y);
-		FindObjectOfType<Player> ().SetPosition (nextPosition);
+		Vector2 newPosition = GameObject.Find(spawnerName).transform.position;
+		FindObjectOfType<Player> ().SetPosition (newPosition);
 	}
 
 	void OnDisable ()

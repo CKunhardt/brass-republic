@@ -13,6 +13,7 @@ public class NPC : Entity {
 		framebuffer = 0;
 		horizontal = 0;
 		vertical = 0;
+		moveSpeed = 0.05f;
 
 	}
 	
@@ -22,7 +23,7 @@ public class NPC : Entity {
 
 		framebuffer++;
 
-		if (framebuffer == 10) {
+		if (framebuffer == 20) {
 
 			horizontal = (int)Mathf.Floor (Random.Range (-1, 2));
 			vertical = (int)Mathf.Floor (Random.Range (-1, 2));

@@ -5,13 +5,11 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour {
 
-	public string sceneName;
-	public float x;
-	public float y;
+	public string sceneName, spawnerName;
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		GameManager.Instance.nextPosition = new Vector2(x, y);
+		GameManager.Instance.spawnerName = spawnerName;
 		SceneManager.LoadScene(sceneName);
 	}
 }
