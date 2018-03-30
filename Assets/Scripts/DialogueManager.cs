@@ -12,8 +12,6 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
-
-
     // Use this for initialization
     void Start()
     {
@@ -22,6 +20,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+    	Debug.Log(DialogueEventManager.Instance.player.name);
+    	DialogueEventManager.Instance.diagEvent.Invoke(true);
+
         nameText.text = dialogue.name;
 
         sentences.Clear();
@@ -49,6 +50,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         dialogBox.SetActive(false);
+		DialogueEventManager.Instance.diagEvent.Invoke(false);
     }
 
 

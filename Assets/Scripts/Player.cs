@@ -11,10 +11,18 @@ public class Player : Entity {
 		anim = GetComponent<Animator>();
 		horizontal = 0;
 		vertical = 0;
+		isInDialogue = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
+	{
+		if (!isInDialogue) {
+			handleMovement();
+		}
+	}
+
+	protected override void handleMovement () 
 	{
 		horizontal = (int)Input.GetAxisRaw ("Horizontal");
 		vertical = (int)Input.GetAxisRaw ("Vertical");
@@ -31,7 +39,6 @@ public class Player : Entity {
 			anim.SetBool ("isWalking", false);
 			fixFlying();
 		}
-
 	}
 
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPC : Entity {
 
 	int framebuffer;
+	public bool isMoveable;
 
 	// Use this for initialization
 	void Start () {
@@ -14,13 +15,19 @@ public class NPC : Entity {
 		horizontal = 0;
 		vertical = 0;
 		moveSpeed = 0.05f;
-
+		isInDialogue = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		if (!isInDialogue && isMoveable) {
+			handleMovement();
+		}
+	}
 
+	protected override void handleMovement ()
+	{
 		framebuffer++;
 
 		if (framebuffer == 20) {
@@ -43,8 +50,5 @@ public class NPC : Entity {
 			anim.SetBool ("isWalking", false);
 			fixFlying();
 		}
-
-
-		
 	}
 }

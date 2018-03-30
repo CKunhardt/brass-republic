@@ -8,6 +8,7 @@ public abstract class Entity : MonoBehaviour {
 	protected Animator anim;
 	protected float moveSpeed = 0.1f;
 	protected int horizontal, vertical;
+	protected bool isInDialogue;
 
 	protected void Move (int xDir, int yDir)
 	{
@@ -15,14 +16,21 @@ public abstract class Entity : MonoBehaviour {
 		rb2D.MovePosition(rb2D.position + newPos * moveSpeed);
 	}
 
+	protected abstract void handleMovement();
+
+	public void setIsInDialogue (bool state)
+	{
+		isInDialogue = state;
+	}
+
 	public void SetPosition (Vector2 newPos)
 	{
 		rb2D.position = newPos;
-		Debug.Log("New position: " + rb2D.position.x + ", " + rb2D.position.y);
 	}
 
-	protected void fixFlying ()
+	public void fixFlying ()
 	{
 		rb2D.velocity = Vector2.zero;
+		anim.SetBool("isWalking", false);
 	}
 }

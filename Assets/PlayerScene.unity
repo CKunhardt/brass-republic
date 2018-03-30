@@ -167,6 +167,11 @@ Prefab:
       propertyPath: y
       value: 4.42
       objectReference: {fileID: 0}
+    - target: {fileID: 114266416425856932, guid: 511831fbacb4f1c45922693da7d5d567,
+        type: 2}
+      propertyPath: spawnerName
+      value: Spawner_Start
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 511831fbacb4f1c45922693da7d5d567, type: 2}
   m_IsPrefabParent: 0
