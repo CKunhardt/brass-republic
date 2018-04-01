@@ -229,6 +229,11 @@ Prefab:
       propertyPath: m_AllowMSAA
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 212876844257300076, guid: 42e2c24bfd293964d8aa4c87753bbc72,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42e2c24bfd293964d8aa4c87753bbc72, type: 2}
   m_IsPrefabParent: 0

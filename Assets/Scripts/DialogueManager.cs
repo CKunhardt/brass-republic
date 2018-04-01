@@ -20,7 +20,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-    	Debug.Log(DialogueEventManager.Instance.player.name);
     	DialogueEventManager.Instance.diagEvent.Invoke(true);
 
         nameText.text = dialogue.name;
