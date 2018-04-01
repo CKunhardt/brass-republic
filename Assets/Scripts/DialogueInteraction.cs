@@ -5,13 +5,23 @@ using UnityEngine;
 public class DialogueInteraction : MonoBehaviour, IInteractable {
 
 	public GameObject target;
-	public GameObject dialogueBox;
-	public GameObject interactionPrompt;
+
 
 	public bool hasInteraction;
 
 	private Collider2D currentOther;
+	private GameObject dialogueBox;
+	private GameObject interactionPrompt;
+	private DialogueManager dManage;
+
 	private bool isInteractable = false;
+
+	void Start ()
+	{
+		dManage = GameObject.Find("UICanvas/DialogueManager").GetComponent<DialogueManager>();
+		dialogueBox = dManage.dialogBox;
+		interactionPrompt = dManage.interactionPrompt;
+	}
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
@@ -58,7 +68,7 @@ public class DialogueInteraction : MonoBehaviour, IInteractable {
 			DialogueEventManager.Instance.target = targetEntity;
 		
 			dialogueBox.SetActive (true);
-			dTrig.TriggerDialogue ();
+			dTrig.TriggerDialogue (dManage);
 		}
 	}
 }

@@ -6,7 +6,13 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager> {
 	protected GameManager () {} // guarantee this will be always a singleton only - can't use the constructor!
  
-	public string spawnerName;
+	private string _spawnerName;
+	public string spawnerName {
+		get { return this._spawnerName; }
+		set { _spawnerName = value; }
+	}
+
+	public Canvas uiCanvas;
  
 	void Awake () {
 		// Your initialization code here
