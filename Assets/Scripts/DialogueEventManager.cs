@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class DialogueEventManager : Singleton<DialogueEventManager> {
 
+	protected DialogueEventManager () {}
+
 	private Entity playerInternal;
 	private Entity targetInternal;
 	public Entity player {

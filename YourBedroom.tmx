@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="6" height="9" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="6" height="9" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
  <tileset firstgid="1" source="tileset.tsx"/>
+ <tileset firstgid="257" source="Furniture.tsx"/>
  <layer name="Floor" width="6" height="9">
   <properties>
    <property name="unity:sortingLayerName" value="Floor"/>
@@ -23,9 +24,22 @@
    <property name="unity:sortingOrder" value="0"/>
   </properties>
   <data encoding="csv">
-0,54,119,119,120,0,
-0,114,115,115,116,0,
+0,135,135,135,135,0,
+0,115,115,115,115,0,
 0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Furniture" width="6" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,
+0,0,0,0,0,0,
+0,0,267,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,
 0,0,0,0,0,0,
@@ -82,7 +96,7 @@
 104,0,0,0,0,102,
 104,0,0,0,0,102,
 104,0,0,0,0,102,
-76,77,77,77,77,78
+76,20,0,18,77,78
 </data>
  </layer>
 </map>
