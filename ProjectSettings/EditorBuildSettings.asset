@@ -14,3 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SleeperCar.unity
     guid: e4620bff6e717084390744fd7c13025f
+  - enabled: 1
+    path: Assets/YourBedroom.unity
+    guid: 4a2be764c1725dd4e8d75fbfcd33dd9a
+  - enabled: 1
+    path: Assets/ParentsBedroom.unity
+    guid: 38d27189ae627d847a290a3ddb4aa506
+  - enabled: 1
+    path: Assets/LivingRoom.unity
+    guid: 11debc1fb679ae143a4283def2c4190e
+  - enabled: 1
+    path: Assets/MainRoad.unity
+    guid: 8c543b352095c1843aeadc32cc501218
