@@ -2,62 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueInteraction : MonoBehaviour, IInteractable {
+public class DialogueInteraction : Interaction, IInteractable {
 
 	public GameObject target;
-
-
-	public bool hasInteraction;
-
-	private Collider2D currentOther;
 	private GameObject dialogueBox;
-	private GameObject interactionPrompt;
-	private DialogueManager dManage;
+	private DialogueManager dManager;
 
-	private bool isInteractable = false;
-
-	void Start ()
+	new void Start ()
 	{
-		dManage = GameObject.Find("UICanvas/DialogueManager").GetComponent<DialogueManager>();
-		dialogueBox = dManage.dialogBox;
-		interactionPrompt = dManage.interactionPrompt;
+		base.Start();
+		dManager = uiCanvas.dialogueManager;
+		dialogueBox = dManager.dialogBox;
 	}
 
-	void OnTriggerEnter2D (Collider2D other)
-	{
-		if (other.tag == "Player" && hasInteraction) {
-			currentOther = other;
-			isInteractable = true;
-			interactionPrompt.SetActive(true);
-			StartCoroutine(WaitForInput());
-		}
-	}
-
-	void OnTriggerExit2D (Collider2D other)
-	{
-		if (other.tag == "Player" && hasInteraction) {
-			currentOther = null;
-			isInteractable = false;
-			interactionPrompt.SetActive(false);
-		}
-	}
-
-	IEnumerator WaitForInput ()
-	{
-		while (isInteractable) {
-			yield return StartCoroutine(WaitForKeyDown());
-			Interact();
-		}
-	}
-
-	IEnumerator WaitForKeyDown ()
-	{
-		do {
-			yield return null;
-		} while (!Input.GetKeyDown("space"));
-	}
-
-	public void Interact ()
+	public override void Interact ()
 	{
 		if (target.tag == "NPC" && isInteractable == true) {
 			DialogueTrigger dTrig = target.GetComponent<DialogueTrigger> ();
@@ -68,7 +26,7 @@ public class DialogueInteraction : MonoBehaviour, IInteractable {
 			DialogueEventManager.Instance.target = targetEntity;
 		
 			dialogueBox.SetActive (true);
-			dTrig.TriggerDialogue (dManage);
+			dTrig.TriggerDialogue (dManager);
 		}
 	}
 }
