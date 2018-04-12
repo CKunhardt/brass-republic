@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SleeperCar.unity
     guid: e4620bff6e717084390744fd7c13025f
+  - enabled: 1
+    path: Assets/PauseMenu.unity
+    guid: d3325a7aaad12244a9fb0ef22633af97
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: c611b77fdf60ddf48a62dbb1a68d52b1
