@@ -44,6 +44,8 @@ public class GameManager : Singleton<GameManager>
 		set { _spawnerName = value; }
 	}
 
+    public string lastSceneName { get; set; }
+
 	public Canvas uiCanvas;
 
 	public GameStateVariables GSV;
@@ -51,11 +53,14 @@ public class GameManager : Singleton<GameManager>
 
 	void Awake ()
 	{
-		// Your initialization code here
+        // Your initialization code here
+        lastSceneName = "PlayerScene";
+        spawnerName = "Spawner_Menu";
 		SceneManager.sceneLoaded += OnSceneLoaded;
 		GSV = new GameStateVariables ();
 		DMH = GameObject.Find ("UICanvas/DialogueSystem/DialogueMessageHandler");
 		DialogueEventManager.Instance.player = GameObject.FindGameObjectWithTag ("Player").GetComponent<Entity> ();
+        StartCoroutine(WaitForInput(KeyCode.Escape));
 	}
 
 	void OnSceneLoaded (Scene scene, LoadSceneMode mode)
@@ -77,7 +82,21 @@ public class GameManager : Singleton<GameManager>
 		}
 	}
 
-	void OnDisable ()
+    IEnumerator WaitForInput(KeyCode key) {
+        while (true) {
+            yield return StartCoroutine(WaitForKeyDown(key));
+            lastSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene("PauseMenu");
+        }
+    }
+
+    IEnumerator WaitForKeyDown(KeyCode key) {
+        do {
+            yield return null;
+        } while (!Input.GetKeyDown(key));
+    }
+
+    void OnDisable ()
 	{
 		SceneManager.sceneLoaded -= OnSceneLoaded;
 	}

@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
 	public void PlayGame () {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4);
-        // if Game is 0 in build and Menu is 4
+        SceneManager.LoadScene(GameManager.Instance.lastSceneName);
     }
 
     public void QuitGame() {

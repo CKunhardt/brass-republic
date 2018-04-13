@@ -9,13 +9,11 @@ public class Pause : MonoBehaviour {
     // fixed by uncheking Pause script from PauseMenu component
 
     public void Main() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        // if Pause is 3 in build and Menu is 4
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Game() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 3);
-        // if Pause is 3 in build and Game is 0
+        SceneManager.LoadScene(GameManager.Instance.lastSceneName);
     }
 
 }

@@ -6,20 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TestScene.unity
-    guid: 1bb0c995abbe6d14695b485a85902bf2
+    path: Assets/MainMenu.unity
+    guid: c611b77fdf60ddf48a62dbb1a68d52b1
+  - enabled: 1
+    path: Assets/PlayerScene.unity
+    guid: 5e96282f11c71414aa0175a06bcd817e
   - enabled: 1
     path: Assets/EngineCar.unity
     guid: f36ee2092d7c6de4d979d968240fe695
   - enabled: 1
+    path: Assets/DiningCar.unity
+    guid: 18a09e509fa1fc24e9f0815f5ca05e9a
+  - enabled: 1
     path: Assets/SleeperCar.unity
     guid: e4620bff6e717084390744fd7c13025f
   - enabled: 1
-    path: Assets/PauseMenu.unity
-    guid: d3325a7aaad12244a9fb0ef22633af97
-  - enabled: 1
-    path: Assets/Menu.unity
-    guid: c611b77fdf60ddf48a62dbb1a68d52b1
-  - enabled: 1
     path: Assets/YourBedroom.unity
     guid: 4a2be764c1725dd4e8d75fbfcd33dd9a
+  - enabled: 1
+    path: Assets/ParentsBedroom.unity
+    guid: 38d27189ae627d847a290a3ddb4aa506
+  - enabled: 1
+    path: Assets/LivingRoom.unity
+    guid: 11debc1fb679ae143a4283def2c4190e
+  - enabled: 1
+    path: Assets/MainRoad.unity
+    guid: 8c543b352095c1843aeadc32cc501218
+  - enabled: 1
+    path: Assets/PauseMenu.unity
+    guid: d3325a7aaad12244a9fb0ef22633af97
