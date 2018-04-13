@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DialogueEventManager : Singleton<DialogueEventManager> {
+public class DialogueEventManager : Singleton<DialogueEventManager>
+{
 
-	protected DialogueEventManager () {}
+	protected DialogueEventManager ()
+	{
+	}
 
 	private Entity playerInternal;
 	private Entity targetInternal;
+
 	public Entity player {
 		get {
 			return this.playerInternal;
@@ -17,6 +21,7 @@ public class DialogueEventManager : Singleton<DialogueEventManager> {
 			playerInternal = value;
 		}
 	}
+
 	public Entity target {
 		get {
 			return this.targetInternal;
@@ -30,26 +35,28 @@ public class DialogueEventManager : Singleton<DialogueEventManager> {
 
 	void Awake ()
 	{
-		if(diagEvent == null)
-			diagEvent = new DialogueEvent();
+		if (diagEvent == null)
+			diagEvent = new DialogueEvent ();
 
-		diagEvent.AddListener(ChangeDialogueState);
+		diagEvent.AddListener (ChangeDialogueState);
 	}
 
 	void ChangeDialogueState (bool state)
 	{
 		playerInternal.setIsInDialogue (state);
-		playerInternal.fixFlying();
-		targetInternal.setIsInDialogue (state);
-		targetInternal.fixFlying();
+		playerInternal.fixFlying ();
+		if (targetInternal != null) {
+			targetInternal.setIsInDialogue (state);
+			targetInternal.fixFlying ();
+		}
 
 		if (state == false) {
-			player = null;
 			target = null;
 		}
 	}
 }
 
-public class DialogueEvent : UnityEvent<bool> {
+public class DialogueEvent : UnityEvent<bool>
+{
 	
 }

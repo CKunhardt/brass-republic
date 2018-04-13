@@ -210,7 +210,7 @@ Prefab:
     - target: {fileID: 114266416425856932, guid: 511831fbacb4f1c45922693da7d5d567,
         type: 2}
       propertyPath: sceneName
-      value: TestScene
+      value: DiningCar
       objectReference: {fileID: 0}
     - target: {fileID: 114266416425856932, guid: 511831fbacb4f1c45922693da7d5d567,
         type: 2}
