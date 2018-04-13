@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class NPC : Entity {
 
+	public bool isMoveable;
+
 	int framebuffer;
+	int initialSortingOrder;
 
 	// Use this for initialization
 	void Start () {
@@ -13,16 +16,24 @@ public class NPC : Entity {
 		framebuffer = 0;
 		horizontal = 0;
 		vertical = 0;
-
+		moveSpeed = 0.05f;
+		isInDialogue = false;
+		initialSortingOrder = GetComponent<SpriteRenderer>().sortingOrder;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		if (!isInDialogue && isMoveable) {
+			handleMovement();
+		}
+	}
 
+	protected override void handleMovement ()
+	{
 		framebuffer++;
 
-		if (framebuffer == 10) {
+		if (framebuffer == 30) {
 
 			horizontal = (int)Mathf.Floor (Random.Range (-1, 2));
 			vertical = (int)Mathf.Floor (Random.Range (-1, 2));
@@ -42,8 +53,20 @@ public class NPC : Entity {
 			anim.SetBool ("isWalking", false);
 			fixFlying();
 		}
-
-
-		
 	}
+
+	void OnTriggerEnter2D (Collider2D other)
+	{
+		if (other.tag == "Player") {
+			GetComponent<SpriteRenderer>().sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder + 1;
+		}
+	}
+
+	void OnTriggerExit2D (Collider2D other)
+	{
+		if (other.tag == "Player") {
+			GetComponent<SpriteRenderer>().sortingOrder = initialSortingOrder;
+		}
+	}
+
 }
