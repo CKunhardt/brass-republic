@@ -27,15 +27,9 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 	{
 		if (targetName == "Neighbor 1" && !GameManager.Instance.GSV.TalkedToN1) {
 			GameManager.Instance.GSV.TalkedToN1 = true;
-			if (GameManager.Instance.GSV.TalkedToN2 && !GameManager.Instance.GSV.CompletedTalkingToNeighbors) {
-				GameManager.Instance.GSV.CompletedTalkingToNeighbors = true;
-			}
 		}
 		if (targetName == "Neighbor 2" && !GameManager.Instance.GSV.TalkedToN2) {
 			GameManager.Instance.GSV.TalkedToN2 = true;
-			if (GameManager.Instance.GSV.TalkedToN1 && !GameManager.Instance.GSV.CompletedTalkingToNeighbors) {
-				GameManager.Instance.GSV.CompletedTalkingToNeighbors = true;
-			}
 		}	
 	}
 }
