@@ -28,8 +28,13 @@ public class Hit : MonoBehaviour {
             //Debug.Log("hit player");
             playerHealth.DecreaseCurrentHealth(1);
             Destroy(this.gameObject);
+        }
 
-
+        if (other.gameObject.tag == "Player Attack")
+        {
+            //Debug.Log("hit attack");
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
