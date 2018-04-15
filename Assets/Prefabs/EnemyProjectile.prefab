@@ -20,13 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4232807201216946}
   - component: {fileID: 212722099128612546}
-  - component: {fileID: 114438046522921040}
-  - component: {fileID: 135278873339297686}
   - component: {fileID: 54580056768401564}
-  - component: {fileID: 114676214471997350}
   - component: {fileID: 65713464963547812}
+  - component: {fileID: 114370551121702088}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: EnemyProjectile
   m_TagString: Enemy Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +70,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114438046522921040
+--- !u!114 &114370551121702088
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -80,34 +78,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1960038832081706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 966c060474b2f094c9350b21eb0ed814, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f0cb9648de61064a93894894e4c73f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 54580056768401564}
-  speed: 0
---- !u!114 &114676214471997350
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1960038832081706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91e7a8ba201ebe243b5cce3654e0eab8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!135 &135278873339297686
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1960038832081706}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  speed: 15
 --- !u!212 &212722099128612546
 SpriteRenderer:
   m_ObjectHideFlags: 1
