@@ -13,7 +13,7 @@ public class PlayerProjectileSpawner : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log(Player);
+        //Debug.Log(Player);
 
         shooting = false;
         totalShootingDelay = 40;
@@ -26,9 +26,9 @@ public class PlayerProjectileSpawner : MonoBehaviour
         if (Input.GetKey("s") && shooting == false)
         {
             shooting = true;
-            Debug.Log("S");
+            //Debug.Log("S");
             ShootPlayerProjectile(Player.transform.position.x);
-            Debug.Log("spawn");
+            //Debug.Log("spawn");
             shootingDelay = 0;
         }
 

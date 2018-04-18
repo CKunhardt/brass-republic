@@ -11,7 +11,7 @@ public class EnemyProjectile : Projectile
 	new void Start ()
 	{
 		base.Start ();
-		playerHealth = player.GetComponent<PlayerHealth> ();
+		playerHealth = player.GetComponent<PlayerHealth>();
 		playerPos = player.transform.position;
 		rb.AddForce ((playerPos.x - rb.transform.position.x), 0, -speed, ForceMode.VelocityChange);
 	}

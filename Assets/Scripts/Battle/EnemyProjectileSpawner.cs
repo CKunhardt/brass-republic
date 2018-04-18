@@ -6,14 +6,30 @@ public class EnemyProjectileSpawner : MonoBehaviour
 {
 
 	public Rigidbody projectilePrefab;
+    public GameObject Enemy;
 
-	// Update is called once per frame
-	void Update ()
+    private void Start()
+    {
+        Enemy = GameObject.FindGameObjectWithTag("NPC");
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
+        //AttackOnSpace(Enemy.transform.position);
 
-		//testing
-		if (Input.GetKeyDown ("space")) {
-			Rigidbody projectileInstance = Instantiate (projectilePrefab, this.transform) as Rigidbody;
-		}
 	}
+
+    void AttackOnSpace(Vector3 enemyPos) //testing
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            Rigidbody projectileInstance = Instantiate(projectilePrefab, enemyPos, new Quaternion(0, 0, 0, 0));// as Rigidbody;
+        }
+    }
+
+    public void Attack(Vector3 enemyPos)
+    {
+        Rigidbody projectileInstance = Instantiate(projectilePrefab, enemyPos, new Quaternion(0, 0, 0, 0));
+    }
 }
