@@ -35,3 +35,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PauseMenu.unity
     guid: d3325a7aaad12244a9fb0ef22633af97
+  - enabled: 1
+    path: Assets/BattleSystemTest.unity
+    guid: a27f8f824d93261458d3b08e3238e2de

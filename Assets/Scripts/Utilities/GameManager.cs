@@ -37,6 +37,8 @@ public class GameManager : Singleton<GameManager>
 		}
 	}
 
+	public List<string> pauseLevels;
+
 	private string _spawnerName;
 
 	public string spawnerName {
@@ -50,6 +52,7 @@ public class GameManager : Singleton<GameManager>
 
 	public bool isPaused;
 	public bool firstLoad;
+	public bool comingFromBattle;
 
 	public Canvas uiCanvas;
 
@@ -61,6 +64,7 @@ public class GameManager : Singleton<GameManager>
 	void Awake ()
 	{
 		// Your initialization code here
+		PopulatePauseLevels ();
 		SceneManager.sceneLoaded += OnSceneLoaded;
 		GSV = new GameStateVariables ();
 		DMH = GameObject.Find ("UICanvas/DialogueSystem/DialogueMessageHandler");
@@ -68,8 +72,10 @@ public class GameManager : Singleton<GameManager>
 		playerObject = GameObject.FindGameObjectWithTag ("Player");
 		isPaused = true;
 		firstLoad = true;
+		comingFromBattle = false;
 		DialogueEventManager.Instance.player = playerObject.GetComponent<Entity> ();
 		StartCoroutine (WaitForInput (KeyCode.Escape));
+		StartCoroutine (WaitForInput (KeyCode.F1));
 	}
 
 	public void Reinitialize ()
@@ -82,16 +88,22 @@ public class GameManager : Singleton<GameManager>
 	{
 		if (!isPaused) {
 			Vector2 newPosition = GameObject.Find (spawnerName).transform.position;
-			FindObjectOfType<Player> ().SetPosition (newPosition);
+			playerObject.GetComponent<Player> ().SetPosition (newPosition);
 			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
-		} else if (scene.name != "MainMenu" && scene.name != "PauseMenu" && !firstLoad) {
-			FindObjectOfType<Player> ().SetPosition (pausePosition);
+		} else if (!pauseLevels.Contains (scene.name) && !firstLoad) { // Game was paused, we're coming from a menu or battle
+			if (comingFromBattle) {
+				playerObject.SetActive (true);
+				comingFromBattle = false;
+			}
+			playerObject.GetComponent<Player> ().SetPosition (pausePosition);
 			isPaused = false;
-		} else if (scene.name != "MainMenu" && scene.name != "PauseMenu" && scene.name != "PlayerScene" && firstLoad) {
+		} else if (!pauseLevels.Contains (scene.name) && scene.name != "PlayerScene" && firstLoad) { // Game was paused since this was the first load.
 			Vector2 newPosition = GameObject.Find (spawnerName).transform.position;
-			FindObjectOfType<Player> ().SetPosition (newPosition);
+			playerObject.GetComponent<Player> ().SetPosition (newPosition);
 			firstLoad = false;
 			isPaused = false;
+			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
+		} else { // Loading a pause level
 			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
 		}
 	}
@@ -100,12 +112,20 @@ public class GameManager : Singleton<GameManager>
 	{
 		while (true) {
 			yield return StartCoroutine (WaitForKeyDown (key));
-			string sceneName = SceneManager.GetActiveScene ().name;
-			if (!isPaused) {
-				lastSceneName = sceneName;
-				pausePosition = playerObject.transform.position;
-				isPaused = true;
-				SceneManager.LoadScene ("PauseMenu");
+			if (key == KeyCode.Escape) {
+				string sceneName = SceneManager.GetActiveScene ().name;
+				if (!isPaused) {
+					PrepareForPause (sceneName);
+					SceneManager.LoadScene ("PauseMenu");
+				}
+			} else if (key == KeyCode.F1) {
+				string sceneName = SceneManager.GetActiveScene ().name;
+				if (!comingFromBattle && !isPaused) {
+					PrepareForPause (sceneName);
+					SceneManager.LoadScene ("BattleSystemTest");
+				} else if (comingFromBattle) {
+					SceneManager.LoadScene (lastSceneName);
+				}
 			}
 		}
 	}
@@ -115,6 +135,24 @@ public class GameManager : Singleton<GameManager>
 		do {
 			yield return null;
 		} while (!Input.GetKeyDown (key));
+	}
+
+	private void PrepareForPause (string sceneName)
+	{
+		lastSceneName = sceneName;
+		pausePosition = playerObject.transform.position;
+		isPaused = true;
+	}
+
+	private void PopulatePauseLevels ()
+	{
+		if (pauseLevels == null) {
+			pauseLevels = new List<string> ();
+			pauseLevels.Add ("MainMenu");
+			pauseLevels.Add ("PauseMenu");
+			pauseLevels.Add ("BattleSystemTest");
+			pauseLevels.Add ("BattleSystem");
+		}
 	}
 
 	void OnDisable ()
