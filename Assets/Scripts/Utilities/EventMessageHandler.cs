@@ -41,8 +41,11 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 			GameManager.Instance.playerObject.SetActive (false);
 			GameManager.Instance.comingFromBattle = true;
 			break;
+		case "BattleSystem":
+			GameManager.Instance.playerObject.SetActive (false);
+			GameManager.Instance.comingFromBattle = true;
+			break;
 		}
-
 	}
 
 	public void CheckDialogueEvents (string targetName)
