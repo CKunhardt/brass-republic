@@ -11,6 +11,7 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 		switch (sceneName) {
 		case "YourBedroom":
 			if (!GameManager.Instance.GSV.AwokeInRoom) {
+				GameManager.Instance.playerObject.GetComponent<Entity> ().SetDirection ("y", -1f);
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnAwakeInBedroom ());
 				GameManager.Instance.GSV.AwokeInRoom = true;
 			}
