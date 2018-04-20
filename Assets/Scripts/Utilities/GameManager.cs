@@ -32,7 +32,7 @@ public class GameManager : Singleton<GameManager>
 			EnteredMainRoad = false;
 			TalkedToN1 = false;
 			TalkedToN2 = false;
-			CompletedTalkingToNeighbors = false,
+			CompletedTalkingToNeighbors = false;
 			ReenteredBedroom = false;
 
 			GameState = 1;
