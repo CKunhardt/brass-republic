@@ -16,4 +16,6 @@ public interface IDialogueMessageHandler : IEventSystemHandler
 	void DialogueMessage_OnEnterMainRoad ();
 
 	void DialogueMessage_OnCompleteTalkingToNeighbors ();
+
+	void DialogueMessage_OnReenterBedroom ();
 }

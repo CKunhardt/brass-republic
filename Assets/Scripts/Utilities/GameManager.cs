@@ -19,7 +19,8 @@ public class GameManager : Singleton<GameManager>
 			EnteredMainRoad,
 			TalkedToN1,
 			TalkedToN2,
-			CompletedTalkingToNeighbors;
+			CompletedTalkingToNeighbors,
+			ReenteredBedroom;
 
 		public int GameState;
 
@@ -31,7 +32,8 @@ public class GameManager : Singleton<GameManager>
 			EnteredMainRoad = false;
 			TalkedToN1 = false;
 			TalkedToN2 = false;
-			CompletedTalkingToNeighbors = false;
+			CompletedTalkingToNeighbors = false,
+			ReenteredBedroom = false;
 
 			GameState = 1;
 		}
@@ -122,7 +124,7 @@ public class GameManager : Singleton<GameManager>
 				string sceneName = SceneManager.GetActiveScene ().name;
 				if (!comingFromBattle && !isPaused) {
 					PrepareForPause (sceneName);
-					SceneManager.LoadScene ("BattleSystemTest");
+					SceneManager.LoadScene ("BattleSystem");
 				} else if (comingFromBattle) {
 					SceneManager.LoadScene (lastSceneName);
 				}

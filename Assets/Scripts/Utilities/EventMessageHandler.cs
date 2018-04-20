@@ -14,6 +14,10 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnAwakeInBedroom ());
 				GameManager.Instance.GSV.AwokeInRoom = true;
 			}
+			if (!GameManager.Instance.GSV.ReenteredBedroom && GameManager.Instance.GSV.CompletedTalkingToNeighbors) {
+				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnReenterBedroom ());
+				GameManager.Instance.GSV.ReenteredBedroom = true;
+			}
 			break;
 		case "LivingRoom":
 			if (!GameManager.Instance.GSV.EnteredLivingRoom) {
