@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: c28637043e4ebe044978e05b1e753024
-timeCreated: 1524253943
+guid: 76e8910e3162fc64c91568ae9ebb8f33
+timeCreated: 1524337122
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: NPCGirl2_0
-    21300002: NPCGirl2_1
-    21300004: NPCGirl2_2
-    21300006: NPCGirl2_3
-    21300008: NPCGirl2_4
-    21300010: NPCGirl2_5
-    21300012: NPCGirl2_6
-    21300014: NPCGirl2_7
-    21300016: NPCGirl2_8
-    21300018: NPCGirl2_9
-    21300020: NPCGirl2_10
-    21300022: NPCGirl2_11
-    21300024: NPCGirl2_12
-    21300026: NPCGirl2_13
-    21300028: NPCGirl2_14
-    21300030: NPCGirl2_15
+    21300000: NPCLittleGirl1_0
+    21300002: NPCLittleGirl1_1
+    21300004: NPCLittleGirl1_2
+    21300006: NPCLittleGirl1_3
+    21300008: NPCLittleGirl1_4
+    21300010: NPCLittleGirl1_5
+    21300012: NPCLittleGirl1_6
+    21300014: NPCLittleGirl1_7
+    21300016: NPCLittleGirl1_8
+    21300018: NPCLittleGirl1_9
+    21300020: NPCLittleGirl1_10
+    21300022: NPCLittleGirl1_11
+    21300024: NPCLittleGirl1_12
+    21300026: NPCLittleGirl1_13
+    21300028: NPCLittleGirl1_14
+    21300030: NPCLittleGirl1_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -96,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NPCGirl2_0
+      name: NPCLittleGirl1_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 2
         y: 146
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,13 +110,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_1
+      name: NPCLittleGirl1_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 34
         y: 146
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,13 +124,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_2
+      name: NPCLittleGirl1_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 66
         y: 146
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,13 +138,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_3
+      name: NPCLittleGirl1_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 98
         y: 146
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,13 +152,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_4
+      name: NPCLittleGirl1_4
       rect:
         serializedVersion: 2
-        x: 4
+        x: 2
         y: 98
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,27 +166,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_5
+      name: NPCLittleGirl1_5
       rect:
         serializedVersion: 2
-        x: 36
-        y: 99
-        width: 25
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: NPCGirl2_6
-      rect:
-        serializedVersion: 2
-        x: 68
+        x: 34
         y: 98
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,13 +180,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_7
+      name: NPCLittleGirl1_6
       rect:
         serializedVersion: 2
-        x: 100
+        x: 66
         y: 98
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,13 +194,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_8
+      name: NPCLittleGirl1_7
       rect:
         serializedVersion: 2
-        x: 4
-        y: 49
-        width: 25
-        height: 42
+        x: 98
+        y: 98
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,13 +208,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_9
+      name: NPCLittleGirl1_8
       rect:
         serializedVersion: 2
-        x: 36
+        x: 2
         y: 50
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,13 +222,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_10
+      name: NPCLittleGirl1_9
       rect:
         serializedVersion: 2
-        x: 68
+        x: 34
         y: 50
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,13 +236,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_11
+      name: NPCLittleGirl1_10
       rect:
         serializedVersion: 2
-        x: 100
+        x: 66
         y: 50
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,13 +250,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_12
+      name: NPCLittleGirl1_11
       rect:
         serializedVersion: 2
-        x: 4
+        x: 98
+        y: 50
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleGirl1_12
+      rect:
+        serializedVersion: 2
+        x: 2
         y: 2
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,27 +278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_13
+      name: NPCLittleGirl1_13
       rect:
         serializedVersion: 2
-        x: 36
-        y: 1
-        width: 25
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: NPCGirl2_14
-      rect:
-        serializedVersion: 2
-        x: 68
+        x: 34
         y: 2
-        width: 25
-        height: 42
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,13 +292,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: NPCGirl2_15
+      name: NPCLittleGirl1_14
       rect:
         serializedVersion: 2
-        x: 100
+        x: 66
         y: 2
-        width: 25
-        height: 42
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleGirl1_15
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2
+        width: 29
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
