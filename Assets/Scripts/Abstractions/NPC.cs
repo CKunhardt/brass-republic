@@ -5,13 +5,13 @@ using UnityEngine;
 public class NPC : Entity
 {
 
-	public bool isMoveable { get; set; }
+	public bool isMoveable;
 
 	int framebuffer;
 	int initialSortingOrder;
 
 	// Use this for initialization
-	void Start ()
+	protected void Start ()
 	{
 		rb2D = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
