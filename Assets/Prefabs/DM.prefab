@@ -53,4 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: 
+    avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
     sentences: []

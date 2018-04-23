@@ -476,6 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Yourself
+    avatar: {fileID: 0}
     sentences:
     - Huh... Mom didn't wake me up this morning...
     - Maybe I should look around the house.
@@ -492,6 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Yourself
+    avatar: {fileID: 0}
     sentences:
     - '...where are you...'
 --- !u!114 &114160323999753318
@@ -507,6 +509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 114566165389785320}
   dialogueText: {fileID: 114905237810125456}
+  icon: {fileID: 0}
   dialogBox: {fileID: 1183187460772568}
 --- !u!114 &114271744155854262
 MonoBehaviour:
@@ -534,6 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Yourself
+    avatar: {fileID: 0}
     sentences:
     - Mom? Dad? Where are you?
 --- !u!114 &114305083480677380
@@ -794,6 +798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Yourself
+    avatar: {fileID: 0}
     sentences:
     - This is too weird.
     - I need to go back to my room and think...
@@ -839,6 +844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Yourself
+    avatar: {fileID: 0}
     sentences:
     - Maybe my neighbors will know something...
 --- !u!114 &114858686929048188

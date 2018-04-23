@@ -164,7 +164,7 @@ Prefab:
     - target: {fileID: 114846193778111804, guid: 53cc75d95e6d13b4bb353ba9b6d0598d,
         type: 2}
       propertyPath: dialogue.name
-      value: Narrator
+      value: Yourself
       objectReference: {fileID: 0}
     - target: {fileID: 114846193778111804, guid: 53cc75d95e6d13b4bb353ba9b6d0598d,
         type: 2}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 785222093}
   - component: {fileID: 785222092}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Blackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -426,6 +426,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114160323999753318, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: icon
+      value: 
+      objectReference: {fileID: 1469806214}
+    - target: {fileID: 114062476060586174, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.avatar
+      value: 
+      objectReference: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018,
+        type: 3}
+    - target: {fileID: 114285622571315188, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.avatar
+      value: 
+      objectReference: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018,
+        type: 3}
+    - target: {fileID: 114152682130433964, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.avatar
+      value: 
+      objectReference: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018,
+        type: 3}
+    - target: {fileID: 114851540322092576, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.avatar
+      value: 
+      objectReference: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018,
+        type: 3}
+    - target: {fileID: 114768608129715954, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.avatar
+      value: 
+      objectReference: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02b3f95b5e825f24eb5ee96e53f81fc7, type: 2}
   m_IsPrefabParent: 0
@@ -439,6 +474,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224200280000964096, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
     type: 2}
   m_PrefabInternal: {fileID: 1469806211}
+--- !u!114 &1469806214 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114953202340658218, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1469806211}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1642105567
 Prefab:
   m_ObjectHideFlags: 0
