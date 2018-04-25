@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 493818401}
-  playerHealth: 0
+  playerHealth: 5
   healthSlider: {fileID: 581841377}
   damaged: 0
 --- !u!1 &581841375
@@ -771,6 +771,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114153608702841934, guid: 914603575c6fb85489e9c3ced6ae96e3,
+        type: 2}
+      propertyPath: enemyHealth
+      value: 
+      objectReference: {fileID: 1794972001}
     - target: {fileID: 1095801412969722, guid: 914603575c6fb85489e9c3ced6ae96e3, type: 2}
       propertyPath: m_IsActive
       value: 0
@@ -1022,6 +1027,8 @@ GameObject:
   - component: {fileID: 1794971997}
   - component: {fileID: 1794972000}
   - component: {fileID: 1794971999}
+  - component: {fileID: 1794972002}
+  - component: {fileID: 1794972001}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: NPC
@@ -1099,7 +1106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftXBound: -5
   rightXBound: 5
-  speed: 2
+  initialSpeed: 1
   enemyProjectileSpawner: {fileID: 1524623752}
 --- !u!54 &1794972000
 Rigidbody:
@@ -1116,6 +1123,32 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1794972001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1794971996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d1dd6d24a054a4ea7b39648b65f84a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMovement: {fileID: 1794971999}
+  enemyHealth: 5
+--- !u!136 &1794972002
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1794971996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.09
+  m_Height: 0.42
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2012364265
 GameObject:
   m_ObjectHideFlags: 0

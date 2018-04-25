@@ -19,14 +19,14 @@ public class NPC : Entity
 		horizontal = 0;
 		vertical = 0;
 		moveSpeed = 0.05f;
-		isInDialogue = false;
+		movementEnabled = true;
 		initialSortingOrder = GetComponent<SpriteRenderer> ().sortingOrder;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (!isInDialogue && isMoveable) {
+		if (movementEnabled && isMoveable) {
 			handleMovement ();
 		}
 	}

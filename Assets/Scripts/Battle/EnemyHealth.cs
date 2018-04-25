@@ -1,32 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
-{
-    public Rigidbody rb;
-    GameObject Projectile;
-    public float playerHealth;
+public class EnemyHealth : MonoBehaviour {
+
+    public EnemyMovement enemyMovement;
+    public int enemyHealth;
     SpriteRenderer spriteRend;
-    public Slider healthSlider;
-    public bool damaged;
+    private bool damaged;
+    float damagedFlash;
     float damageFlash;
     float totalDamageFlash = 20;
     Color normalColor;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start () {
+        enemyMovement = gameObject.GetComponent<EnemyMovement>();
         spriteRend = GetComponent<SpriteRenderer>();
-        playerHealth = 5;
         damaged = false;
         damageFlash = 0;
         normalColor = spriteRend.color;
-    }
 
-    private void FixedUpdate()
-    {
+    }
+	
+	// Update is called once per frame
+	void FixedUpdate () {
         if (damaged == true)
         {
             if (damageFlash < totalDamageFlash)
@@ -43,28 +41,17 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+
     public void DecreaseCurrentHealth(int damage)
     {
-        if (damaged == false)
-        {
-            damaged = true;
-            playerHealth -= damage;
-            //Debug.Log(playerHealth);
-            healthSlider.value = playerHealth;
+        Debug.Log("decrease enemy health");
+        enemyHealth -= damage;
+        damaged = true;
 
-            if (playerHealth <= 0)
+        if (enemyHealth <= 0)
             {
-                // do death code
+            enemyMovement.enabled = false;
+            //trigger battle end
             }
         }
     }
-
-    //IEnumerator FlashColor(Color color, Color initial)
-    //{
-
-    //    spriteRend.color = color;
-    //    yield return new WaitForSeconds(0.3f);
-    //    spriteRend.color = initial;
-
-    //}
-}
