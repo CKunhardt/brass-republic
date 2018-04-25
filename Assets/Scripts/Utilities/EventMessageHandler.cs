@@ -12,6 +12,7 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 		case "YourBedroom":
 			if (!GameManager.Instance.GSV.AwokeInRoom) {
 				GameManager.Instance.playerObject.GetComponent<Entity> ().SetDirection ("y", -1f);
+				FadeManager.Instance.StartFade (true);
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnAwakeInBedroom ());
 				GameManager.Instance.GSV.AwokeInRoom = true;
 			}
@@ -53,9 +54,16 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 	{
 		if (targetName == "Neighbor 1" && !GameManager.Instance.GSV.TalkedToN1) {
 			GameManager.Instance.GSV.TalkedToN1 = true;
-		}
-		if (targetName == "Neighbor 2" && !GameManager.Instance.GSV.TalkedToN2) {
+		} else if (targetName == "Neighbor 2" && !GameManager.Instance.GSV.TalkedToN2) {
 			GameManager.Instance.GSV.TalkedToN2 = true;
-		}	
+		} else if (targetName == "YourBed") {
+			if (GameManager.Instance.GSV.ReenteredBedroom && GameManager.Instance.GSV.GameState == 1) {
+				FadeManager.Instance.StartFadeOutAndIn ();
+				Debug.Log ("Game state 2");
+				GameManager.Instance.GSV.GameState = 2;
+			} else {
+				Debug.Log ("not time for sleep");
+			}
+		}
 	}
 }

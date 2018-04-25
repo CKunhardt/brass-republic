@@ -2,27 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Entity {
+public class Player : Entity
+{
 
 	// Use this for initialization
-	protected void Start () {
-		DontDestroyOnLoad(this);
-		rb2D = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
+	protected void Start ()
+	{
+		DontDestroyOnLoad (this);
+		rb2D = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
 		horizontal = 0;
 		vertical = 0;
-		isInDialogue = false;
+		movementEnabled = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (!isInDialogue) {
-			handleMovement();
+		if (movementEnabled) {
+			handleMovement ();
 		}
 	}
 
-	protected override void handleMovement () 
+	protected override void handleMovement ()
 	{
 		horizontal = (int)Input.GetAxisRaw ("Horizontal");
 		vertical = (int)Input.GetAxisRaw ("Vertical");
@@ -37,7 +39,7 @@ public class Player : Entity {
 			Move (horizontal, vertical);
 		} else {
 			anim.SetBool ("isWalking", false);
-			fixFlying();
+			fixFlying ();
 		}
 	}
 

@@ -43,11 +43,9 @@ public class DialogueEventManager : Singleton<DialogueEventManager>
 
 	void ChangeDialogueState (bool state)
 	{
-		playerInternal.setIsInDialogue (state);
-		playerInternal.fixFlying ();
+		playerInternal.setMovementEnabled (!state);
 		if (targetInternal != null) {
-			targetInternal.setIsInDialogue (state);
-			targetInternal.fixFlying ();
+			targetInternal.setMovementEnabled (!state);
 		}
 
 		if (state == false) {

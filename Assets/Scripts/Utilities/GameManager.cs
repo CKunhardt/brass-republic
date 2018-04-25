@@ -91,7 +91,7 @@ public class GameManager : Singleton<GameManager>
 		if (!isPaused) {
 			Vector2 newPosition = GameObject.Find (spawnerName).transform.position;
 			playerObject.GetComponent<Player> ().SetPosition (newPosition);
-			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
+			StartCoroutine (SceneLoadEvents (scene.name));
 		} else if (!pauseLevels.Contains (scene.name) && !firstLoad) { // Game was paused, we're coming from a menu or battle
 			if (comingFromBattle) {
 				playerObject.SetActive (true);
@@ -108,6 +108,13 @@ public class GameManager : Singleton<GameManager>
 		} else { // Loading a pause level
 			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
 		}
+	}
+
+	IEnumerator SceneLoadEvents (string sceneName)
+	{
+		yield return FadeManager.Instance.StartFadeAsync (true);
+		GameManager.Instance.playerObject.GetComponent<Entity> ().setMovementEnabled (true);
+		ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (sceneName));
 	}
 
 	IEnumerator WaitForInput (KeyCode key)
