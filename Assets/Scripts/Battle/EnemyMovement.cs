@@ -6,16 +6,15 @@ public class EnemyMovement : MonoBehaviour {
 
     public float leftXBound;
     public float rightXBound;
-    //bool moving;
-    //bool movingRight;
     Vector3 moveDestination;
-    public float speed;
-    //Rigidbody rb;
+    public float initialSpeed;
+    private float speed;
     private Vector3 lastPosition;
     private Vector3 startPosition;
     private float startTime;
     private float journeyLength;
     private float startPush;
+    bool attacking;
 
     public EnemyProjectileSpawner enemyProjectileSpawner;
 
@@ -23,9 +22,9 @@ public class EnemyMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        //moving = false;
-        //rb = this.GetComponent<Rigidbody>();
         lastPosition = transform.position;
+        speed = initialSpeed;
+        attacking = false;
 
         //enemyProjectileSpawner = gameObject.GetComponent<EnemyProjectileSpawner>();
 	}
@@ -41,7 +40,11 @@ public class EnemyMovement : MonoBehaviour {
             journeyLength = Vector3.Distance(transform.position, moveDestination);
             startPush = 0.001f;
 
-            enemyProjectileSpawner.Attack(transform.position);
+            if (attacking)
+            {
+                enemyProjectileSpawner.Attack(transform.position);
+                speed += 0.1f;
+            }
         }
 
         lastPosition = transform.position;
