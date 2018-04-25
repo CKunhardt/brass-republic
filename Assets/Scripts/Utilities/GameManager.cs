@@ -13,16 +13,17 @@ public class GameManager : Singleton<GameManager>
 
 	public class GameStateVariables
 	{
-		public bool AwokeInRoom,
-			EnteredLivingRoom,
-			EnteredParentsRoom,
-			EnteredMainRoad,
-			TalkedToN1,
-			TalkedToN2,
-			CompletedTalkingToNeighbors,
-			ReenteredBedroom;
+        public bool AwokeInRoom,
+            EnteredLivingRoom,
+            EnteredParentsRoom,
+            EnteredMainRoad,
+            TalkedToN1,
+            TalkedToN2,
+            CompletedTalkingToNeighbors,
+            ReenteredBedroom;
 
-		public int GameState;
+        public int GameState,
+            BattleTutorialStage;
 
 		public GameStateVariables ()
 		{
@@ -36,6 +37,7 @@ public class GameManager : Singleton<GameManager>
 			ReenteredBedroom = false;
 
 			GameState = 1;
+            BattleTutorialStage = 1;
 		}
 	}
 

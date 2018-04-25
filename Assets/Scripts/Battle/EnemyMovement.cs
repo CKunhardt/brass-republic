@@ -14,11 +14,10 @@ public class EnemyMovement : MonoBehaviour {
     private float startTime;
     private float journeyLength;
     private float startPush;
-    bool attacking;
+    public bool attacking;
+    
 
     public EnemyProjectileSpawner enemyProjectileSpawner;
-
-
 
 	// Use this for initialization
 	void Start () {
@@ -31,7 +30,23 @@ public class EnemyMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        //unfinished
 
+        if (GameManager.Instance.GSV.BattleTutorialStage == 1)
+        {
+            Move();
+
+        }
+        
+        else if (GameManager.Instance.GSV.BattleTutorialStage == 2)
+        {
+            Move();
+
+        }
+    }
+
+    void Move()
+    {
         if (transform.position == lastPosition)
         {
             startTime = Time.time;
@@ -52,28 +67,5 @@ public class EnemyMovement : MonoBehaviour {
         float fracJourney = distCovered / journeyLength;
         transform.position = Vector3.Lerp(startPosition, moveDestination, fracJourney);
         startPush = 0;
-
-        //if (moving == false)
-        //{
-        //    moveDestination = new Vector3(((rightXBound - leftXBound) * Random.value), 0, this.transform.position.z);
-        //    moving = true;
-        //    if (this.transform.position.x < moveDestination.x)
-        //        movingRight = true;
-        //    else
-        //        movingRight = false;
-        //}
-        //else if (moving == true)
-        //{
-        //    //if ((this.transform.position.x > moveDestination.x && movingRight) 
-        //    //    || (this.transform.position.x < moveDestination.x && !movingRight))
-        //    //{
-        //    //    moving = false;
-        //    //}
-        //    else
-        //    {
-        //        rb.MovePosition(moveDestination);
-
-        //    }
-        //}
     }
 }
