@@ -3,7 +3,23 @@ guid: bc7d6c48d92509b41a737a029b6572da
 timeCreated: 1524337145
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: NPCLittleBoy1_0
+    21300002: NPCLittleBoy1_1
+    21300004: NPCLittleBoy1_2
+    21300006: NPCLittleBoy1_3
+    21300008: NPCLittleBoy1_4
+    21300010: NPCLittleBoy1_5
+    21300012: NPCLittleBoy1_6
+    21300014: NPCLittleBoy1_7
+    21300016: NPCLittleBoy1_8
+    21300018: NPCLittleBoy1_9
+    21300020: NPCLittleBoy1_10
+    21300022: NPCLittleBoy1_11
+    21300024: NPCLittleBoy1_12
+    21300026: NPCLittleBoy1_13
+    21300028: NPCLittleBoy1_14
+    21300030: NPCLittleBoy1_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,11 +56,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.37313163, y: 0.6054339}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
@@ -66,10 +82,370 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
-    outline: []
+    sprites:
+    - serializedVersion: 2
+      name: NPCLittleBoy1_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 146
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 146
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 146
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 146
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 98
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 98
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_6
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 98
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_7
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 98
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 50
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 50
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_10
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 50
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_11
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 50
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 2
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: NPCLittleBoy1_15
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 2
+        width: 21
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline:
+    - - {x: -60, y: -54}
+      - {x: -60, y: -96}
+      - {x: -38, y: -96}
+      - {x: -35, y: -95}
+      - {x: -35, y: -63}
+      - {x: -39, y: -54}
+    - - {x: -23, y: -55}
+      - {x: -27, y: -57}
+      - {x: -27, y: -89}
+      - {x: -25, y: -96}
+      - {x: -12, y: -96}
+      - {x: -4, y: -86}
+      - {x: -4, y: -58}
+      - {x: -7, y: -55}
+    - - {x: 26, y: -60}
+      - {x: 23, y: -54}
+      - {x: 11, y: -54}
+      - {x: 4, y: -57}
+      - {x: 4, y: -85}
+      - {x: 7, y: -94}
+      - {x: 10, y: -96}
+      - {x: 24, y: -96}
+      - {x: 29, y: -84}
+      - {x: 29, y: -73}
+      - {x: 28, y: -65}
+    - - {x: 37, y: -55}
+      - {x: 37, y: -93}
+      - {x: 42, y: -96}
+      - {x: 60, y: -96}
+      - {x: 60, y: -55}
+    - - {x: -42, y: -4}
+      - {x: -57, y: -4}
+      - {x: -59, y: -10}
+      - {x: -59, y: -37}
+      - {x: -56, y: -46}
+      - {x: -52, y: -48}
+      - {x: -43, y: -48}
+      - {x: -37, y: -39}
+      - {x: -35, y: -24}
+      - {x: -35, y: -7}
+    - - {x: -21, y: -5}
+      - {x: -27, y: -9}
+      - {x: -27, y: -34}
+      - {x: -26, y: -46}
+      - {x: -23, y: -48}
+      - {x: -5, y: -48}
+      - {x: -3, y: -35}
+      - {x: -3, y: -5}
+    - - {x: 22, y: -4}
+      - {x: 7, y: -4}
+      - {x: 5, y: -10}
+      - {x: 5, y: -41}
+      - {x: 6, y: -47}
+      - {x: 12, y: -48}
+      - {x: 20, y: -48}
+      - {x: 25, y: -38}
+      - {x: 29, y: -17}
+      - {x: 29, y: -7}
+    - - {x: 37, y: -5}
+      - {x: 37, y: -48}
+      - {x: 61, y: -48}
+      - {x: 61, y: -5}
+    - - {x: -54, y: 44}
+      - {x: -61, y: 42}
+      - {x: -61, y: 22}
+      - {x: -59, y: 10}
+      - {x: -53, y: 0}
+      - {x: -37, y: 0}
+      - {x: -37, y: 39}
+      - {x: -43, y: 44}
+    - - {x: -5, y: 38}
+      - {x: -12, y: 43}
+      - {x: -17, y: 43}
+      - {x: -26, y: 41}
+      - {x: -29, y: 40}
+      - {x: -29, y: 1}
+      - {x: -24, y: 0}
+      - {x: -6, y: 0}
+      - {x: -5, y: 2}
+    - - {x: 3, y: 44}
+      - {x: 3, y: 16}
+      - {x: 10, y: 0}
+      - {x: 24, y: 0}
+      - {x: 27, y: 1}
+      - {x: 27, y: 41}
+      - {x: 26, y: 44}
+    - - {x: 39, y: 43}
+      - {x: 35, y: 41}
+      - {x: 35, y: 18}
+      - {x: 37, y: 4}
+      - {x: 39, y: 0}
+      - {x: 59, y: 0}
+      - {x: 59, y: 38}
+      - {x: 55, y: 43}
+    - - {x: -58, y: 92}
+      - {x: -60, y: 87}
+      - {x: -60, y: 48}
+      - {x: -35, y: 48}
+      - {x: -35, y: 88}
+      - {x: -39, y: 92}
+    - - {x: -8, y: 91}
+      - {x: -20, y: 91}
+      - {x: -27, y: 89}
+      - {x: -27, y: 61}
+      - {x: -23, y: 48}
+      - {x: -12, y: 48}
+      - {x: -10, y: 49}
+      - {x: -4, y: 54}
+      - {x: -4, y: 88}
+    - - {x: 21, y: 92}
+      - {x: 7, y: 92}
+      - {x: 4, y: 89}
+      - {x: 4, y: 51}
+      - {x: 5, y: 48}
+      - {x: 25, y: 48}
+      - {x: 29, y: 57}
+      - {x: 29, y: 82}
+      - {x: 27, y: 89}
+    - - {x: 42, y: 91}
+      - {x: 37, y: 89}
+      - {x: 37, y: 50}
+      - {x: 41, y: 48}
+      - {x: 58, y: 48}
+      - {x: 60, y: 54}
+      - {x: 60, y: 88}
+      - {x: 57, y: 91}
     physicsShape: []
   spritePackingTag: 
   userData: 
