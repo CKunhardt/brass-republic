@@ -341,6 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Marley
+    avatar: {fileID: 0}
     sentences: []
 --- !u!114 &584234195
 MonoBehaviour:
@@ -542,6 +543,21 @@ Prefab:
     - target: {fileID: 4378431090526350, guid: 59d5c4f9016351c488274ec1c4900f6a, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95659643309658846, guid: 59d5c4f9016351c488274ec1c4900f6a,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: eb582201e59588f4184218b750cd3dbf, type: 2}
+    - target: {fileID: 212059192617432688, guid: 59d5c4f9016351c488274ec1c4900f6a,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 64fbd96ccc750104c910d368c0be9912,
+        type: 3}
+    - target: {fileID: 1536638618825840, guid: 59d5c4f9016351c488274ec1c4900f6a, type: 2}
+      propertyPath: m_Name
+      value: Jingyi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59d5c4f9016351c488274ec1c4900f6a, type: 2}
