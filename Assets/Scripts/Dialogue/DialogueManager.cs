@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 {
 	public TextMeshProUGUI nameText;
 	public TextMeshProUGUI dialogueText;
+	public Image icon;
 	public GameObject dialogBox;
 
 	private Queue<string> sentences;
@@ -24,6 +25,7 @@ public class DialogueManager : MonoBehaviour
 		DialogueEventManager.Instance.diagEvent.Invoke (true);
 
 		nameText.text = dialogue.name;
+		icon.overrideSprite = dialogue.avatar;
 
 		sentences.Clear ();
 

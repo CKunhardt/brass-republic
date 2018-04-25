@@ -11,8 +11,14 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 		switch (sceneName) {
 		case "YourBedroom":
 			if (!GameManager.Instance.GSV.AwokeInRoom) {
+				GameManager.Instance.playerObject.GetComponent<Entity> ().SetDirection ("y", -1f);
+				FadeManager.Instance.StartFade (true);
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnAwakeInBedroom ());
 				GameManager.Instance.GSV.AwokeInRoom = true;
+			}
+			if (!GameManager.Instance.GSV.ReenteredBedroom && GameManager.Instance.GSV.CompletedTalkingToNeighbors) {
+				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnReenterBedroom ());
+				GameManager.Instance.GSV.ReenteredBedroom = true;
 			}
 			break;
 		case "LivingRoom":
@@ -37,17 +43,27 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 			GameManager.Instance.playerObject.SetActive (false);
 			GameManager.Instance.comingFromBattle = true;
 			break;
+		case "BattleSystem":
+			GameManager.Instance.playerObject.SetActive (false);
+			GameManager.Instance.comingFromBattle = true;
+			break;
 		}
-
 	}
 
 	public void CheckDialogueEvents (string targetName)
 	{
 		if (targetName == "Neighbor 1" && !GameManager.Instance.GSV.TalkedToN1) {
 			GameManager.Instance.GSV.TalkedToN1 = true;
-		}
-		if (targetName == "Neighbor 2" && !GameManager.Instance.GSV.TalkedToN2) {
+		} else if (targetName == "Neighbor 2" && !GameManager.Instance.GSV.TalkedToN2) {
 			GameManager.Instance.GSV.TalkedToN2 = true;
-		}	
+		} else if (targetName == "YourBed") {
+			if (GameManager.Instance.GSV.ReenteredBedroom && GameManager.Instance.GSV.GameState == 1) {
+				FadeManager.Instance.StartFadeOutAndIn ();
+				Debug.Log ("Game state 2");
+				GameManager.Instance.GSV.GameState = 2;
+			} else {
+				Debug.Log ("not time for sleep");
+			}
+		}
 	}
 }

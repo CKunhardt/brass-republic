@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC : Entity {
+public class NPC : Entity
+{
 
 	public bool isMoveable;
 
@@ -10,22 +11,23 @@ public class NPC : Entity {
 	int initialSortingOrder;
 
 	// Use this for initialization
-	void Start () {
-		rb2D = GetComponent<Rigidbody2D>();
-		anim = GetComponent<Animator>();
+	protected void Start ()
+	{
+		rb2D = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
 		framebuffer = 0;
 		horizontal = 0;
 		vertical = 0;
 		moveSpeed = 0.05f;
-		isInDialogue = false;
-		initialSortingOrder = GetComponent<SpriteRenderer>().sortingOrder;
+		movementEnabled = true;
+		initialSortingOrder = GetComponent<SpriteRenderer> ().sortingOrder;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (!isInDialogue && isMoveable) {
-			handleMovement();
+		if (movementEnabled && isMoveable) {
+			handleMovement ();
 		}
 	}
 
@@ -51,21 +53,21 @@ public class NPC : Entity {
 			Move (horizontal, vertical);
 		} else {
 			anim.SetBool ("isWalking", false);
-			fixFlying();
+			fixFlying ();
 		}
 	}
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
 		if (other.tag == "Player") {
-			GetComponent<SpriteRenderer>().sortingOrder = other.GetComponent<SpriteRenderer>().sortingOrder + 1;
+			GetComponent<SpriteRenderer> ().sortingOrder = other.GetComponent<SpriteRenderer> ().sortingOrder + 1;
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D other)
 	{
 		if (other.tag == "Player") {
-			GetComponent<SpriteRenderer>().sortingOrder = initialSortingOrder;
+			GetComponent<SpriteRenderer> ().sortingOrder = initialSortingOrder;
 		}
 	}
 

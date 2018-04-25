@@ -37,5 +37,10 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 		transform.Find (childName).GetComponent<DialogueTrigger> ().TriggerDialogue (dManage);
 	}
 
+	public void DialogueMessage_OnReenterBedroom ()
+	{
+		CallTrigger ("DM_OnReenterBedroom");
+	}
+
 	
 }
