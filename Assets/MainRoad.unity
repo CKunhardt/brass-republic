@@ -499,6 +499,7 @@ MonoBehaviour:
     - (... oh my, I see.)
     - (I just heard a knock. I think there're outside.)
     - (OK, I won't answer...)
+  nextDialogue: {fileID: 0}
 --- !u!1001 &643153613
 Prefab:
   m_ObjectHideFlags: 0
@@ -1218,6 +1219,7 @@ MonoBehaviour:
     - '... Your parents? They weren''t there when you woke up this morning?'
     - '...'
     - (SLAM!)
+  nextDialogue: {fileID: 0}
 --- !u!1001 &1460298112
 Prefab:
   m_ObjectHideFlags: 0
@@ -1722,7 +1724,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1899714571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.63, y: -5.78, z: -0.09667969}
+  m_LocalPosition: {x: 9.52, y: -5.78, z: -0.09667969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
