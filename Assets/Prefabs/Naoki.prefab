@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61780370359762892}
   - component: {fileID: 50467141583177444}
   - component: {fileID: 95445413551569164}
-  - component: {fileID: 114786047572643534}
+  - component: {fileID: 114842215690106444}
   - component: {fileID: 114151735451956038}
   m_Layer: 0
   m_Name: Naoki
@@ -145,11 +145,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Marley
+    name: Naoki
     avatar: {fileID: 0}
     sentences: []
   nextDialogue: {fileID: 0}
---- !u!114 &114786047572643534
+--- !u!114 &114842215690106444
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1328458805724244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7913df3c7e758364a863883893424f17, type: 3}
+  m_Script: {fileID: 11500000, guid: 3444aec447fd08149b05f43ba98f1020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isMoveable: 0

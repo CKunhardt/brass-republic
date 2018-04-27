@@ -38,11 +38,14 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 			if (!GameManager.Instance.GSV.EnteredMainRoad) {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnEnterMainRoad ());
 				GameManager.Instance.GSV.EnteredMainRoad = true;
+			} else if (GameManager.Instance.GSV.GameState == 2 && !GameManager.Instance.GSV.TalkedToNaoki) {
+				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnInspectMainRoad ());
 			}
 			break;
-		case "BattleSystemTest":
-			GameManager.Instance.playerObject.SetActive (false);
-			GameManager.Instance.comingFromBattle = true;
+		case "SleeperCar":
+			if (!GameManager.Instance.GSV.MetTheGang) {
+				GameManager.Instance.GSV.MetTheGang = true;
+			}
 			break;
 		case "BattleSystem":
 			GameManager.Instance.playerObject.SetActive (false);
@@ -59,18 +62,26 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 			GameManager.Instance.GSV.TalkedToN2 = true;
 		} else if (targetName == "YourBed") {
 			if (GameManager.Instance.GSV.ReenteredBedroom && GameManager.Instance.GSV.GameState == 1) {
-				FadeManager.Instance.StartFadeOutAndIn ();
-				Debug.Log ("Game state 2");
-				GameManager.Instance.GSV.GameState = 2;
+				StartCoroutine (GoToSleep ());
 			} else {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerBed ());
 			}
 		}
 	}
 
+	private IEnumerator GoToSleep ()
+	{
+		yield return FadeManager.Instance.StartFadeOutAndInAsync ();
+		GameManager.Instance.GSV.GameState = 2;
+		ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnAwake ());
+	}
+
 	public void CheckCustomEvents (string eventName)
 	{
 		switch (eventName) {
+		case "NaokiMeeting":
+			GameManager.Instance.GSV.TalkedToNaoki = true;
+			break;
 		case "RoyDodgeDone":
 			GameManager.Instance.GSV.BattleTutorialStage = 2;
 			BattleManager.Instance.enemyBattle.GetComponent<EnemyMovement> ().attacking = true;
