@@ -494,7 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Neighbor 2
-    avatar: {fileID: 0}
+    avatar: {fileID: 21300000, guid: 9db4d7d665db7b840a841e701a49af59, type: 3}
     sentences:
     - (... oh my, I see.)
     - (I just heard a knock. I think they're outside.)
@@ -1190,6 +1190,21 @@ Prefab:
       propertyPath: m_Name
       value: Neighbor 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212059192617432688, guid: 59d5c4f9016351c488274ec1c4900f6a,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212059192617432688, guid: 59d5c4f9016351c488274ec1c4900f6a,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212059192617432688, guid: 59d5c4f9016351c488274ec1c4900f6a,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114600683583252072, guid: 59d5c4f9016351c488274ec1c4900f6a, type: 2}
     - {fileID: 61278715807216392, guid: 59d5c4f9016351c488274ec1c4900f6a, type: 2}
@@ -1213,7 +1228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Neighbor 1
-    avatar: {fileID: 0}
+    avatar: {fileID: 21300000, guid: 9db4d7d665db7b840a841e701a49af59, type: 3}
     sentences:
     - Hi, Player! Would you like a cookie? George and I just made some.
     - '... Your parents? They weren''t there when you woke up this morning?'
