@@ -192,7 +192,6 @@ GameObject:
   m_Component:
   - component: {fileID: 213606125}
   - component: {fileID: 213606127}
-  - component: {fileID: 213606126}
   m_Layer: 0
   m_Name: RoadblocksLeft
   m_TagString: Untagged
@@ -217,23 +216,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &213606126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 213606124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f65eca20a2d4a4c459da74b225aeb277, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasInteraction: 1
-  targets:
-  - {fileID: 1110056984}
-  - {fileID: 338706508}
-  - {fileID: 1093017467}
-  - {fileID: 1558470380}
 --- !u!61 &213606127
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -512,6 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Neighbor 2
+    avatar: {fileID: 0}
     sentences:
     - (... oh my, I see.)
     - (I just heard a knock. I think there're outside.)
@@ -1229,6 +1212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     name: Neighbor 1
+    avatar: {fileID: 0}
     sentences:
     - Hi, Player! Would you like a cookie? George and I just made some.
     - '... Your parents? They weren''t there when you woke up this morning?'

@@ -13,6 +13,10 @@ public class DialogueEventManager : Singleton<DialogueEventManager>
 	private Entity playerInternal;
 	private Entity targetInternal;
 
+	public MouseMovement playerBattle { get; set; }
+
+	public EnemyMovement enemyBattle { get; set; }
+
 	public Entity player {
 		get {
 			return this.playerInternal;
@@ -43,13 +47,18 @@ public class DialogueEventManager : Singleton<DialogueEventManager>
 
 	void ChangeDialogueState (bool state)
 	{
-		playerInternal.setMovementEnabled (!state);
-		if (targetInternal != null) {
-			targetInternal.setMovementEnabled (!state);
-		}
+		if (!GameManager.Instance.comingFromBattle) { // normal
+			playerInternal.setMovementEnabled (!state);
+			if (targetInternal != null) {
+				targetInternal.setMovementEnabled (!state);
+			}
 
-		if (state == false) {
-			target = null;
+			if (state == false) {
+				target = null;
+			}
+		} else { // battle system logic
+			playerBattle.movementEnabled = !state;
+			enemyBattle.movementEnabled = !state;
 		}
 	}
 }

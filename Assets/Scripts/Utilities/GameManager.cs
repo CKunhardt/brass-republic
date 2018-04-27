@@ -13,17 +13,19 @@ public class GameManager : Singleton<GameManager>
 
 	public class GameStateVariables
 	{
-        public bool AwokeInRoom,
-            EnteredLivingRoom,
-            EnteredParentsRoom,
-            EnteredMainRoad,
-            TalkedToN1,
-            TalkedToN2,
-            CompletedTalkingToNeighbors,
-            ReenteredBedroom;
+		public bool AwokeInRoom,
+			EnteredLivingRoom,
+			EnteredParentsRoom,
+			EnteredMainRoad,
+			TalkedToN1,
+			TalkedToN2,
+			CompletedTalkingToNeighbors,
+			ReenteredBedroom,
+			MovedLeft,
+			MovedRight;
 
-        public int GameState,
-            BattleTutorialStage;
+		public int GameState,
+			BattleTutorialStage;
 
 		public GameStateVariables ()
 		{
@@ -35,9 +37,11 @@ public class GameManager : Singleton<GameManager>
 			TalkedToN2 = false;
 			CompletedTalkingToNeighbors = false;
 			ReenteredBedroom = false;
+			MovedLeft = false;
+			MovedRight = false;
 
 			GameState = 1;
-            BattleTutorialStage = 1;
+			BattleTutorialStage = 1;
 		}
 	}
 
@@ -90,7 +94,7 @@ public class GameManager : Singleton<GameManager>
 
 	void OnSceneLoaded (Scene scene, LoadSceneMode mode)
 	{
-		if (!isPaused) {
+		if (!isPaused) { // Most loads fall under this category
 			Vector2 newPosition = GameObject.Find (spawnerName).transform.position;
 			playerObject.GetComponent<Player> ().SetPosition (newPosition);
 			StartCoroutine (SceneLoadEvents (scene.name));
@@ -108,12 +112,21 @@ public class GameManager : Singleton<GameManager>
 			isPaused = false;
 			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
 		} else { // Loading a pause level
+			if (scene.name == "MainMenu" && comingFromBattle) {
+				playerObject.SetActive (true);
+				comingFromBattle = false;
+				Cursor.visible = true;
+				Cursor.lockState = CursorLockMode.None;
+			}
 			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
 		}
 	}
 
 	IEnumerator SceneLoadEvents (string sceneName)
 	{
+		if (sceneName == "MainRoad" && GameManager.Instance.GSV.GameState > 1) {
+			GameObject.Find ("RoadblocksLeft").SetActive (false);
+		}
 		yield return FadeManager.Instance.StartFadeAsync (true);
 		GameManager.Instance.playerObject.GetComponent<Entity> ().setMovementEnabled (true);
 		ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (sceneName));
