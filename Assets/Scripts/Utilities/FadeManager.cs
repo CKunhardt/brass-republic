@@ -24,6 +24,11 @@ public class FadeManager : Singleton<FadeManager>
 		StartCoroutine (FadeOutIn ());
 	}
 
+	public IEnumerator StartFadeOutAndInAsync ()
+	{
+		yield return FadeOutIn ();
+	}
+
 	IEnumerator FadeImage (bool fadeIn)
 	{
 		if (fadeIn) {

@@ -58,6 +58,41 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 
 	// Day 2 Triggers
 
+	public void DialogueMessage_PreventEarlyProceed ()
+	{
+		CallTriggerDay2 ("DM_PreventEarlyProceed");
+	}
+
+	public void DialogueMessage_OnAwake ()
+	{
+		CallTriggerDay2 ("DM_OnAwake");
+	}
+
+	public void DialogueMessage_OnInspectParentsRoom ()
+	{
+		CallTriggerDay2 ("DM_OnInspectParentsRoom");
+	}
+
+	public void DialogueMessage_OnInspectMainRoad ()
+	{
+		CallTriggerDay2 ("DM_OnInspectMainRoad");
+	}
+
+	public void DialogueMessage_Urchin2 ()
+	{
+		CallTriggerDay2 ("DM_Urchin2");
+	}
+
+	public void DialogueMessage_Urchin3 ()
+	{
+		CallTriggerDay2 ("DM_Urchin3", "NaokiMeeting");
+	}
+
+	private void CallTriggerDay2 (string childName, string eventName = null)
+	{
+		transform.Find ("Day2/" + childName).GetComponent<DialogueTrigger> ().TriggerDialogue (dManage, eventName);
+	}
+
 	// Battle Triggers
 
 	public void DialogueMessage_MarleyIntro ()

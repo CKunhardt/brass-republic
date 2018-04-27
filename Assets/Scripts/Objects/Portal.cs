@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Portal : MonoBehaviour
 {
@@ -16,7 +17,11 @@ public class Portal : MonoBehaviour
 				GameManager.Instance.lastSceneName = SceneManager.GetActiveScene ().name;
 				SceneManager.LoadScene (sceneName);
 			} else {
-				StartCoroutine (PrepareLoad ());
+				if (sceneName == "EngineCar" && !GameManager.Instance.GSV.TalkedToNaoki) {
+					ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_PreventEarlyProceed ());
+				} else {
+					StartCoroutine (PrepareLoad ());
+				}
 			}
 		} else {
 			other.gameObject.SetActive (false);

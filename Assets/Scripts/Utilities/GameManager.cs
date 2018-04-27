@@ -21,6 +21,8 @@ public class GameManager : Singleton<GameManager>
 			TalkedToN2,
 			CompletedTalkingToNeighbors,
 			ReenteredBedroom,
+			TalkedToNaoki,
+			MetTheGang,
 			MovedLeft,
 			MovedRight;
 
@@ -37,6 +39,8 @@ public class GameManager : Singleton<GameManager>
 			TalkedToN2 = false;
 			CompletedTalkingToNeighbors = false;
 			ReenteredBedroom = false;
+			TalkedToNaoki = false;
+			MetTheGang = false;
 			MovedLeft = false;
 			MovedRight = false;
 
@@ -124,8 +128,15 @@ public class GameManager : Singleton<GameManager>
 
 	IEnumerator SceneLoadEvents (string sceneName)
 	{
-		if (sceneName == "MainRoad" && GameManager.Instance.GSV.GameState > 1) {
-			GameObject.Find ("RoadblocksLeft").SetActive (false);
+		if (sceneName == "MainRoad") {
+			if (GSV.GameState > 1) {
+				GameObject.Find ("RoadblocksLeft").SetActive (false);
+			}
+			if (GSV.GameState != 2) {
+				GameObject.Find ("Naoki").SetActive (false);
+			}
+		} else if (sceneName == "EngineCar" && GSV.MetTheGang) {
+			GameObject.Find ("Naoki").SetActive (false);
 		}
 		yield return FadeManager.Instance.StartFadeAsync (true);
 		GameManager.Instance.playerObject.GetComponent<Entity> ().setMovementEnabled (true);
