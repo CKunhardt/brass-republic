@@ -10,12 +10,14 @@ public class Portal : MonoBehaviour
 
 	void OnTriggerEnter2D (Collider2D other)
 	{
-		if (sceneName == "MainMenu") {
-			GameManager.Instance.spawnerName = spawnerName;
-			GameManager.Instance.lastSceneName = SceneManager.GetActiveScene ().name;
-			SceneManager.LoadScene (sceneName);
-		} else {
-			StartCoroutine (PrepareLoad ());
+		if (other.tag == "Player") {
+			if (sceneName == "MainMenu") {
+				GameManager.Instance.spawnerName = spawnerName;
+				GameManager.Instance.lastSceneName = SceneManager.GetActiveScene ().name;
+				SceneManager.LoadScene (sceneName);
+			} else {
+				StartCoroutine (PrepareLoad ());
+			}
 		}
 	}
 
