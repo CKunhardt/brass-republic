@@ -1485,7 +1485,7 @@ GameObject:
   - component: {fileID: 1751492916}
   - component: {fileID: 1751492915}
   m_Layer: 0
-  m_Name: ColliderTriggerRight
+  m_Name: NeighborCompleteColliderTriggerRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1675,7 +1675,7 @@ GameObject:
   - component: {fileID: 1899714573}
   - component: {fileID: 1899714572}
   m_Layer: 0
-  m_Name: ColliderTriggerLeft
+  m_Name: NeighborCompleteColliderTriggerLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
