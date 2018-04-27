@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 {
@@ -62,8 +63,33 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 				Debug.Log ("Game state 2");
 				GameManager.Instance.GSV.GameState = 2;
 			} else {
-				Debug.Log ("not time for sleep");
+				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerBed ());
 			}
+		}
+	}
+
+	public void CheckCustomEvents (string eventName)
+	{
+		switch (eventName) {
+		case "RoyDodgeDone":
+			GameManager.Instance.GSV.BattleTutorialStage = 2;
+			BattleManager.Instance.enemyBattle.GetComponent<EnemyMovement> ().attacking = true;
+			break;
+		case "RoyAttackDone":
+			GameManager.Instance.GSV.BattleTutorialStage = 3;
+			break;
+		case "RoyCancelDone":
+			GameManager.Instance.GSV.BattleTutorialStage = 4;
+			BattleManager.Instance.enemyBattle.GetComponent<EnemyMovement> ().attacking = true;
+			break;
+		case "RoyFightDone":
+			GameManager.Instance.GSV.BattleTutorialStage = 5;
+			BattleManager.Instance.enemyBattle.GetComponent<EnemyMovement> ().attacking = true;
+			break;
+		case "GameOver":
+			GameManager.Instance.Reinitialize ();
+			SceneManager.LoadScene ("MainMenu");
+			break;
 		}
 	}
 }

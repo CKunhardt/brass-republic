@@ -8,4 +8,6 @@ public interface IEventMessageHandler : IEventSystemHandler
 	void CheckSceneEvents (string sceneName);
 
 	void CheckDialogueEvents (string targetName);
+
+	void CheckCustomEvents (string eventName);
 }

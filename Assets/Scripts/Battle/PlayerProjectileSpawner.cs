@@ -4,45 +4,42 @@ using UnityEngine;
 
 public class PlayerProjectileSpawner : MonoBehaviour
 {
-    public Rigidbody playerProjectilePrefab;
-    public GameObject Player;
-    bool shooting;
-    float shootingDelay;
-    float totalShootingDelay;
+	public Rigidbody playerProjectilePrefab;
+	public GameObject Player;
+	bool shooting;
+	float shootingDelay;
+	float totalShootingDelay;
 
-    void Start()
-    {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        //Debug.Log(Player);
+	void Start ()
+	{
+		Player = GameObject.FindGameObjectWithTag ("Player");
+		//Debug.Log(Player);
 
-        shooting = false;
-        totalShootingDelay = 40;
-    }
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        //this.GetComponent<Rigidbody>().position = Player.transform.position;
-        
-        if (Input.GetKey("s") && shooting == false)
-        {
-            shooting = true;
-            //Debug.Log("S");
-            ShootPlayerProjectile(Player.transform.position.x);
-            //Debug.Log("spawn");
-            shootingDelay = 0;
-        }
+		shooting = false;
+		totalShootingDelay = 40;
+	}
 
-        if (shooting == true)
-        {
-            if (shootingDelay < totalShootingDelay)
-                shootingDelay++;
-            else
-                shooting = false;
-        }
-    }
+	// Update is called once per frame
+	void FixedUpdate ()
+	{        
+		if (GameManager.Instance.GSV.BattleTutorialStage == 0 || GameManager.Instance.GSV.BattleTutorialStage >= 3) {
+			if (Input.GetMouseButtonDown (0) && shooting == false) {
+				shooting = true;
+				ShootPlayerProjectile (Player.transform.position.x);
+				shootingDelay = 0;
+			}
 
-    void ShootPlayerProjectile(float x)
-    {
-        Rigidbody playerProjectileInstance = Instantiate(playerProjectilePrefab, new Vector3(x, 0, 0), new Quaternion(0, 0, 0, 0));// as Rigidbody;
-    }
+			if (shooting == true) {
+				if (shootingDelay < totalShootingDelay)
+					shootingDelay++;
+				else
+					shooting = false;
+			}
+		}
+	}
+
+	void ShootPlayerProjectile (float x)
+	{
+		Instantiate (playerProjectilePrefab, new Vector3 (x, 0, 0), new Quaternion (0, 0, 0, 0)); // Spawn a player attack
+	}
 }

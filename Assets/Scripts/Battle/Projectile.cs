@@ -11,8 +11,7 @@ public abstract class Projectile : MonoBehaviour
 
 	protected void Start ()
 	{
-		player = GameObject.FindGameObjectWithTag ("Player");
-		// enemy = GameObject.FindGameObjectWithTag("Enemy");
+		player = BattleManager.Instance.playerBattle;
 		rb = gameObject.GetComponent<Rigidbody> ();
 	}
 
