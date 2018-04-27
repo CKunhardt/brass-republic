@@ -344,6 +344,16 @@ Prefab:
       propertyPath: m_FirstSelected
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114593386079546580, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Click the Left Mouse Button to throw a punch.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114305083480677380, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: m_Text
+      value: Hit E to Interact
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02b3f95b5e825f24eb5ee96e53f81fc7, type: 2}
   m_IsPrefabParent: 0
