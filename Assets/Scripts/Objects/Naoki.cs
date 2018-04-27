@@ -38,8 +38,10 @@ public class Naoki : NPC
 				else if (walkSegment == 2)
 					SecondWalk ();
 			}
-		} else {
+		} else if (SceneManager.GetActiveScene ().name != "SleeperCar") {
 			anim.SetFloat ("input_x", -1f);
+		} else {
+			fixFlying ();
 		}
 	}
 

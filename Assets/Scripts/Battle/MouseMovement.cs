@@ -15,7 +15,7 @@ public class MouseMovement : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody> ();
 		rb.transform.position = new Vector3 (0, 0, 0);
-		Cursor.visible = false;
+		//Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Confined;
 	}
 
@@ -29,14 +29,14 @@ public class MouseMovement : MonoBehaviour
 			Vector3 movement = new Vector3 (((Input.mousePosition.x / Screen.width) * 20) - 10, 0, 0);
 			rb.MovePosition (movement);
 			if (GameManager.Instance.GSV.BattleTutorialStage == 1) {
-				if (rb.transform.position.x > 1.5f)
+				if (rb.transform.position.x > 9f)
 					GameManager.Instance.GSV.MovedRight = true;
-				if (rb.transform.position.x < -1.5f)
+				if (rb.transform.position.x < -9f)
 					GameManager.Instance.GSV.MovedLeft = true;
 				if (GameManager.Instance.GSV.MovedLeft && GameManager.Instance.GSV.MovedRight)
 					BattleManager.Instance.ProgressBattle ();
 			}
 		}
-	}
 
+	}
 }

@@ -26,6 +26,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1027992525017872
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4995077511223398}
+  - component: {fileID: 114181082804691984}
+  m_Layer: 0
+  m_Name: DM_Marley1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1052070436731330
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4099333471495746}
+  - component: {fileID: 114421677200147992}
+  m_Layer: 0
+  m_Name: DM_Naoki2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1063234789646292
 GameObject:
   m_ObjectHideFlags: 1
@@ -53,6 +85,22 @@ GameObject:
   - component: {fileID: 114989154513724212}
   m_Layer: 0
   m_Name: DM_RoyAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1091563476432694
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4709397183920400}
+  - component: {fileID: 114378430929858074}
+  m_Layer: 0
+  m_Name: DM_OnInspectMainRoad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -144,6 +192,54 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1220328864131394
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4303808124907196}
+  - component: {fileID: 114172203373408896}
+  m_Layer: 0
+  m_Name: DM_Urchin3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1235540372724056
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4044359181666746}
+  - component: {fileID: 114058987276811674}
+  m_Layer: 0
+  m_Name: DM_HowToMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1291425690600182
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4818359109674440}
+  - component: {fileID: 114073290113090148}
+  m_Layer: 0
+  m_Name: DM_PreventEarlyProceed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1297216913962976
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +257,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1308877972582148
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4684284957504380}
+  - component: {fileID: 114304941592691640}
+  m_Layer: 0
+  m_Name: DM_OnAwake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1316059895592146
 GameObject:
   m_ObjectHideFlags: 1
@@ -209,6 +321,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1333001887900790
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4080681660153464}
+  - component: {fileID: 114234120921207500}
+  m_Layer: 0
+  m_Name: DM_PlayerResponse2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1333474653502954
 GameObject:
   m_ObjectHideFlags: 1
@@ -220,6 +348,22 @@ GameObject:
   - component: {fileID: 114851540322092576}
   m_Layer: 0
   m_Name: DM_OnEnterMainRoad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1383708805460294
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4538848864271584}
+  - component: {fileID: 114756643094217506}
+  m_Layer: 0
+  m_Name: DM_Urchin4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -275,6 +419,38 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1440564785366062
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4463012859341190}
+  - component: {fileID: 114593386079546580}
+  m_Layer: 0
+  m_Name: DM_HowToAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1440763324257136
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4282147044679124}
+  - component: {fileID: 114127083724372634}
+  m_Layer: 0
+  m_Name: DM_Roy3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1444942780820720
 GameObject:
   m_ObjectHideFlags: 1
@@ -287,6 +463,69 @@ GameObject:
   - component: {fileID: 114953202340658218}
   m_Layer: 0
   m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1473291593907948
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4606760902034254}
+  m_Layer: 0
+  m_Name: Day2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1487408967587906
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4189692695456930}
+  - component: {fileID: 114422981033816348}
+  m_Layer: 0
+  m_Name: DM_Naoki1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1490354414213648
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4996173719574218}
+  - component: {fileID: 114244704474717752}
+  m_Layer: 0
+  m_Name: DM_OnInspectParentsRoom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1543954846435528
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4705181625763222}
+  - component: {fileID: 114769404440573220}
+  m_Layer: 0
+  m_Name: DM_HowToFight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,6 +628,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1682442507769516
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4765325071556626}
+  - component: {fileID: 114756457039717790}
+  m_Layer: 0
+  m_Name: DM_PlayerResponse3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1685445178989910
 GameObject:
   m_ObjectHideFlags: 1
@@ -454,6 +709,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1793957914139262
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4515628808214354}
+  - component: {fileID: 114111076738190920}
+  m_Layer: 0
+  m_Name: DM_Roy2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1845211721064462
 GameObject:
   m_ObjectHideFlags: 1
@@ -465,6 +736,22 @@ GameObject:
   - component: {fileID: 114062476060586174}
   m_Layer: 0
   m_Name: DM_OnAwakeInBedroom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1847511818149196
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4797870340667540}
+  - component: {fileID: 114087600988680682}
+  m_Layer: 0
+  m_Name: DM_Urchin2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,6 +836,54 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1935741939292794
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4945629154521522}
+  - component: {fileID: 114391227819951286}
+  m_Layer: 0
+  m_Name: DM_PlayerResponse1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1960887406787408
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4200616627345742}
+  - component: {fileID: 114928003376655914}
+  m_Layer: 0
+  m_Name: DM_Roy1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1982980145382858
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4002034840362614}
+  - component: {fileID: 114147756118817166}
+  m_Layer: 0
+  m_Name: DM_PlayerResponse4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1987634104139916
 GameObject:
   m_ObjectHideFlags: 1
@@ -581,6 +916,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4002034840362614
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982980145382858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4011639854351250
 Transform:
   m_ObjectHideFlags: 1
@@ -594,6 +942,32 @@ Transform:
   m_Father: {fileID: 4454298568607738}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4044359181666746
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235540372724056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4559875991540136}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4080681660153464
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333001887900790}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
+  m_LocalScale: {x: 1.0003201, y: 1.0003201, z: 1.0003201}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4087046671299904
 Transform:
   m_ObjectHideFlags: 1
@@ -605,7 +979,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559875991540136}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4092041657551880
 Transform:
@@ -620,6 +994,19 @@ Transform:
   m_Father: {fileID: 4559875991540136}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4099333471495746
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052070436731330}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4126139997176814
 Transform:
   m_ObjectHideFlags: 1
@@ -631,7 +1018,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559875991540136}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4153649158695144
 Transform:
@@ -657,7 +1044,33 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559875991540136}
-  m_RootOrder: 8
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4189692695456930
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487408967587906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4200616627345742
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960887406787408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4229883420202562
 Transform:
@@ -670,7 +1083,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559875991540136}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4267308019177874
 Transform:
@@ -685,6 +1098,32 @@ Transform:
   m_Father: {fileID: 4392331740233192}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4282147044679124
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440763324257136}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4303808124907196
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1220328864131394}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
+  m_LocalScale: {x: 1.0003201, y: 1.0003201, z: 1.0003201}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4392331740233192
 Transform:
   m_ObjectHideFlags: 1
@@ -698,6 +1137,7 @@ Transform:
   - {fileID: 4267308019177874}
   - {fileID: 4559875991540136}
   - {fileID: 4454298568607738}
+  - {fileID: 4606760902034254}
   m_Father: {fileID: 4512392849458200}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -712,7 +1152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559875991540136}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4454298568607738
 Transform:
@@ -732,6 +1172,19 @@ Transform:
   - {fileID: 4750653980244836}
   m_Father: {fileID: 4392331740233192}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4463012859341190
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440564785366062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4559875991540136}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4492790992222578
 Transform:
@@ -761,6 +1214,32 @@ Transform:
   m_Father: {fileID: 224200280000964096}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4515628808214354
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1793957914139262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4538848864271584
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1383708805460294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
+  m_LocalScale: {x: 1.0003201, y: 1.0003201, z: 1.0003201}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4545174539738474
 Transform:
   m_ObjectHideFlags: 1
@@ -772,7 +1251,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559875991540136}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4556154970185992
 Transform:
@@ -799,10 +1278,13 @@ Transform:
   m_Children:
   - {fileID: 4667728061805508}
   - {fileID: 4092041657551880}
+  - {fileID: 4044359181666746}
   - {fileID: 4087046671299904}
   - {fileID: 4945741419406598}
+  - {fileID: 4463012859341190}
   - {fileID: 4126139997176814}
   - {fileID: 4545174539738474}
+  - {fileID: 4705181625763222}
   - {fileID: 4626929481784076}
   - {fileID: 4229883420202562}
   - {fileID: 4165758284788850}
@@ -823,6 +1305,36 @@ Transform:
   m_Father: {fileID: 4713862407777220}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4606760902034254
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1473291593907948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4684284957504380}
+  - {fileID: 4996173719574218}
+  - {fileID: 4709397183920400}
+  - {fileID: 4945629154521522}
+  - {fileID: 4797870340667540}
+  - {fileID: 4080681660153464}
+  - {fileID: 4303808124907196}
+  - {fileID: 4765325071556626}
+  - {fileID: 4538848864271584}
+  - {fileID: 4818359109674440}
+  - {fileID: 4189692695456930}
+  - {fileID: 4200616627345742}
+  - {fileID: 4995077511223398}
+  - {fileID: 4002034840362614}
+  - {fileID: 4515628808214354}
+  - {fileID: 4099333471495746}
+  - {fileID: 4282147044679124}
+  m_Father: {fileID: 4392331740233192}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4626929481784076
 Transform:
   m_ObjectHideFlags: 1
@@ -834,7 +1346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559875991540136}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4667728061805508
 Transform:
@@ -849,6 +1361,19 @@ Transform:
   m_Father: {fileID: 4559875991540136}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4684284957504380
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308877972582148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4704773972425464
 Transform:
   m_ObjectHideFlags: 1
@@ -860,6 +1385,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4454298568607738}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4705181625763222
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543954846435528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4559875991540136}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4709397183920400
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091563476432694}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4713862407777220
@@ -889,6 +1440,45 @@ Transform:
   m_Father: {fileID: 4454298568607738}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4765325071556626
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682442507769516}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
+  m_LocalScale: {x: 1.0003201, y: 1.0003201, z: 1.0003201}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4797870340667540
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847511818149196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4818359109674440
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1291425690600182}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 526.9284, y: 335.97107, z: -9300.088}
+  m_LocalScale: {x: 96, y: 96, z: 96}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4823051314808172
 Transform:
   m_ObjectHideFlags: 1
@@ -902,6 +1492,19 @@ Transform:
   m_Father: {fileID: 4454298568607738}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4945629154521522
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935741939292794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4945741419406598
 Transform:
   m_ObjectHideFlags: 1
@@ -913,7 +1516,33 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4559875991540136}
-  m_RootOrder: 3
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4995077511223398
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027992525017872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4996173719574218
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490354414213648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4606760902034254}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114006115793920320
 MonoBehaviour:
@@ -947,6 +1576,23 @@ MonoBehaviour:
     - 'That''s it for the demo. Thanks so much for playing our game! '
     - Hit the next button or space to go back to the main menu.
   nextDialogue: {fileID: 0}
+--- !u!114 &114058987276811674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235540372724056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    avatar: {fileID: 0}
+    sentences:
+    - Move the mouse to move your player's head.
+  nextDialogue: {fileID: 0}
 --- !u!114 &114062476060586174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -965,6 +1611,40 @@ MonoBehaviour:
     - Huh... Mom didn't wake me up this morning...
     - Maybe I should look around the house.
   nextDialogue: {fileID: 0}
+--- !u!114 &114073290113090148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1291425690600182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Yourself
+    avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
+    sentences:
+    - I wonder what that noise was... I should look around.
+  nextDialogue: {fileID: 0}
+--- !u!114 &114087600988680682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847511818149196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: ???
+    avatar: {fileID: 0}
+    sentences:
+    - Psssst!!
+  nextDialogue: {fileID: 114234120921207500}
 --- !u!114 &114090042918406474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -999,6 +1679,42 @@ MonoBehaviour:
     avatar: {fileID: 21300000, guid: 91183dbac9da6ab4980d3da933538e90, type: 3}
     sentences:
     - "Now you\u2019re ready to fight! Go at it until one of you wins."
+  nextDialogue: {fileID: 114769404440573220}
+--- !u!114 &114111076738190920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1793957914139262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Roy
+    avatar: {fileID: 21300000, guid: 91183dbac9da6ab4980d3da933538e90, type: 3}
+    sentences:
+    - Can it, Marley. You're being a twerp.
+    - He does bring up a good point, though.
+    - Life ain't so easy out here -- bunch of other kids who'd love what we've got.
+  nextDialogue: {fileID: 114421677200147992}
+--- !u!114 &114127083724372634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440763324257136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Roy
+    avatar: {fileID: 21300000, guid: 91183dbac9da6ab4980d3da933538e90, type: 3}
+    sentences:
+    - Don't worry, newbie. I'll guide you through the fight.
   nextDialogue: {fileID: 0}
 --- !u!114 &114135460127823916
 MonoBehaviour:
@@ -1020,6 +1736,23 @@ MonoBehaviour:
     - '...you can dodge or punch back to block it.'
     - "Let\u2019s try it."
   nextDialogue: {fileID: 0}
+--- !u!114 &114147756118817166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1982980145382858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Yourself
+    avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
+    sentences:
+    - Umm...
+  nextDialogue: {fileID: 114111076738190920}
 --- !u!114 &114152682130433964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1052,6 +1785,79 @@ MonoBehaviour:
   dialogueText: {fileID: 114905237810125456}
   icon: {fileID: 114953202340658218}
   dialogBox: {fileID: 1183187460772568}
+--- !u!114 &114172203373408896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1220328864131394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: ???
+    avatar: {fileID: 21300000, guid: e62c5318dfcd9fe438854c92baf1effc, type: 3}
+    sentences:
+    - Psssssssstt!!!!
+    - Hey, you!
+    - Yeah, you, orphan kid. Listen, we don't got much time.
+    - Any minute the fuzz will be here looking for ya.
+  nextDialogue: {fileID: 114756457039717790}
+--- !u!114 &114181082804691984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1027992525017872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Marley
+    avatar: {fileID: 21300000, guid: f0b50fdba3d7a8f43b9b4d5e17158df6, type: 3}
+    sentences:
+    - Hey, Roy! Enough blabbering, you dork!
+    - First things first, I wanna see if this newbie's got some fight in 'em!
+  nextDialogue: {fileID: 114147756118817166}
+--- !u!114 &114234120921207500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333001887900790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Yourself
+    avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
+    sentences:
+    - There it is again...
+  nextDialogue: {fileID: 0}
+--- !u!114 &114244704474717752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490354414213648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Yourself
+    avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
+    sentences:
+    - Still not here...
+    - I should check outside.
+  nextDialogue: {fileID: 0}
 --- !u!114 &114271744155854262
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1081,6 +1887,25 @@ MonoBehaviour:
     avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
     sentences:
     - Mom? Dad? Where are you?
+  nextDialogue: {fileID: 0}
+--- !u!114 &114304941592691640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308877972582148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Yourself
+    avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
+    sentences:
+    - '*yawns*'
+    - I didn't sleep very well...
+    - I wonder if Mom and Dad are home yet...
   nextDialogue: {fileID: 0}
 --- !u!114 &114305083480677380
 MonoBehaviour:
@@ -1115,6 +1940,75 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Hit Space to Interact
+--- !u!114 &114378430929858074
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091563476432694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: ???
+    avatar: {fileID: 0}
+    sentences:
+    - Psst!
+  nextDialogue: {fileID: 114391227819951286}
+--- !u!114 &114391227819951286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1935741939292794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Yourself
+    avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
+    sentences:
+    - What was that noise?
+  nextDialogue: {fileID: 0}
+--- !u!114 &114421677200147992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052070436731330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Naoki
+    avatar: {fileID: 21300000, guid: e62c5318dfcd9fe438854c92baf1effc, type: 3}
+    sentences:
+    - Y'know, Roy, Marley does make a good point.
+    - Why don't you show us what you've got, newbie?
+  nextDialogue: {fileID: 114127083724372634}
+--- !u!114 &114422981033816348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487408967587906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Naoki
+    avatar: {fileID: 21300000, guid: e62c5318dfcd9fe438854c92baf1effc, type: 3}
+    sentences:
+    - "So, I'm Naoki, an' these are my buds. We got  Jingyi, Marley, an\u2019 --"
+  nextDialogue: {fileID: 114928003376655914}
 --- !u!114 &114521271516643214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1227,15 +2121,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07446e38d70484c44a626fe80a794a46, type: 2}
+  m_sharedMaterial: {fileID: 21095857431707284, guid: 07446e38d70484c44a626fe80a794a46,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -1318,6 +2213,23 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114593386079546580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440564785366062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    avatar: {fileID: 0}
+    sentences:
+    - Click the Right Mouse Button to throw a punch.
+  nextDialogue: {fileID: 0}
 --- !u!114 &114609385231460478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1417,6 +2329,44 @@ MonoBehaviour:
     sentences:
     - Tough luck, newbie. Try again some other time, I guess.
   nextDialogue: {fileID: 114052708019958556}
+--- !u!114 &114756457039717790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682442507769516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Yourself
+    avatar: {fileID: 21300000, guid: d44862bb4e92a4d4888b1639c8184018, type: 3}
+    sentences:
+    - Umm...
+  nextDialogue: {fileID: 114756643094217506}
+--- !u!114 &114756643094217506
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1383708805460294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: ???
+    avatar: {fileID: 21300000, guid: e62c5318dfcd9fe438854c92baf1effc, type: 3}
+    sentences:
+    - Look, I'd love to stay here and chit chat, but...
+    - '...we really gotta go. Pronto.'
+    - You dunno where your parents are, right?
+    - That means it's only a matter of time...
+    - Just stick wit' me and you'll be alright.
+  nextDialogue: {fileID: 0}
 --- !u!114 &114768608129715954
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1435,6 +2385,25 @@ MonoBehaviour:
     - This is too weird.
     - I need to go back to my room and think...
     - Maybe they'll come home soon.
+  nextDialogue: {fileID: 0}
+--- !u!114 &114769404440573220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1543954846435528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: 
+    avatar: {fileID: 0}
+    sentences:
+    - Each of you can take about 5 hits.
+    - Watch out for your health bar in the lower-left corner.
+    - Last one standing wins!
   nextDialogue: {fileID: 0}
 --- !u!114 &114802851901446752
 MonoBehaviour:
@@ -1547,15 +2516,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: '>>'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07446e38d70484c44a626fe80a794a46, type: 2}
+  m_sharedMaterial: {fileID: 21095857431707284, guid: 07446e38d70484c44a626fe80a794a46,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -1656,7 +2626,7 @@ MonoBehaviour:
     - "OK, so you\u2019ll stay over here and your opponent will stay over there."
     - Both of you can only move left and right, not up and down.
     - Try it out -- move as far to each side as you can.
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 114058987276811674}
 --- !u!114 &114905237810125456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1678,15 +2648,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 715b80e429c437e40867928a4e1fc975, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 07446e38d70484c44a626fe80a794a46, type: 2}
+  m_sharedMaterial: {fileID: 21095857431707284, guid: 07446e38d70484c44a626fe80a794a46,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
@@ -1787,6 +2758,27 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!114 &114928003376655914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1960887406787408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3e8c84981947b40804799f163d397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Roy
+    avatar: {fileID: 21300000, guid: 91183dbac9da6ab4980d3da933538e90, type: 3}
+    sentences:
+    - And I'm Roy. Welcome to our little gang of urchins.
+    - We're all orphans like you, laying low in this old train car.
+    - See, the government don't take too kindly to orphans...
+    - Thing is, when a kid gets orphaned around here, there's usually a reason.
+    - Anyway, 'nuff about that serious stuff. What's your na--
+  nextDialogue: {fileID: 114181082804691984}
 --- !u!114 &114953202340658218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1830,7 +2822,7 @@ MonoBehaviour:
     avatar: {fileID: 21300000, guid: 91183dbac9da6ab4980d3da933538e90, type: 3}
     sentences:
     - "You\u2019re getting the hang of it! Now you throw a punch."
-  nextDialogue: {fileID: 0}
+  nextDialogue: {fileID: 114593386079546580}
 --- !u!114 &114989166132460390
 MonoBehaviour:
   m_ObjectHideFlags: 1

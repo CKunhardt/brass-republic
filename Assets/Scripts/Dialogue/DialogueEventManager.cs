@@ -47,6 +47,7 @@ public class DialogueEventManager : Singleton<DialogueEventManager>
 
 	void ChangeDialogueState (bool state)
 	{
+		GameManager.Instance.inDialogue = state;
 		if (!GameManager.Instance.comingFromBattle) { // normal
 			playerInternal.setMovementEnabled (!state);
 			if (targetInternal != null) {

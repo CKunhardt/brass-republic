@@ -1112,7 +1112,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f6e9b8863e6c97d449ee54c5db9f8061, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc7d6c48d92509b41a737a029b6572da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 2012364267}
   - component: {fileID: 2012364266}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: BattleCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

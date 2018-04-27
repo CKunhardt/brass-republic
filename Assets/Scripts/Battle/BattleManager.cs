@@ -40,4 +40,9 @@ public class BattleManager : Singleton<BattleManager>
 			break;
 		}
 	}
+
+	public void WrongMove ()
+	{
+		ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_RoyWrong ());
+	}
 }

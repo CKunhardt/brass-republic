@@ -36,4 +36,6 @@ public class Portal : MonoBehaviour
 		GameManager.Instance.lastSceneName = SceneManager.GetActiveScene ().name;
 		SceneManager.LoadScene (sceneName);
 	}
+
+
 }

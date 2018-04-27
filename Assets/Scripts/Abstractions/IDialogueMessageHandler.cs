@@ -40,6 +40,8 @@ public interface IDialogueMessageHandler : IEventSystemHandler
 
 	void DialogueMessage_Urchin3 ();
 
+	void DialogueMessage_Naoki1 ();
+
 	// Battle Triggers
 
 	void DialogueMessage_MarleyIntro ();

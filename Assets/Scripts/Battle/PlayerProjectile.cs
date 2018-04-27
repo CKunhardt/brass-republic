@@ -4,43 +4,32 @@ using UnityEngine;
 
 public class PlayerProjectile : Projectile
 {
-    EnemyHealth enemyHealth;
-    int count;
+	EnemyHealth enemyHealth;
+	int count;
 
 	// Use this for initialization
 	new void Start ()
 	{
 		base.Start ();
 		rb.AddForce (0, 0, speed, ForceMode.VelocityChange);
-        enemyHealth = GameObject.FindGameObjectWithTag("NPC").GetComponent<EnemyHealth>();
-    }
-
-	void FixedUpdate ()
-	{
-		//if (count == 20) {
-		//	count = 0;
-		//} else if (count == 0) {
-		//	Debug.Log (transform.position);
-
-		//}
-		//count++;
+		enemyHealth = GameObject.FindGameObjectWithTag ("NPC").GetComponent<EnemyHealth> ();
 	}
 
-    void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log("triggered");
-        if (other.gameObject.tag == "NPC")
-        {
-            Debug.Log("hit enemy");
-            enemyHealth.DecreaseCurrentHealth(1);
-            Destroy(gameObject);
-        }
+	void OnTriggerEnter (Collider other)
+	{
+		// Hit Enemy
+		if (other.gameObject.tag == "NPC") {
+			enemyHealth.DecreaseCurrentHealth (1);
+			if (GameManager.Instance.GSV.BattleTutorialStage == 4) {
+				BattleManager.Instance.WrongMove ();
+			}
+			Destroy (gameObject);
+		}
 
-        if (other.gameObject.tag == "Player Attack")
-        {
-            //Debug.Log("hit attack");
-            Destroy(other.gameObject);
-            Destroy(gameObject);
-        }
-    }
+		// Cancelled Attacak
+		if (other.gameObject.tag == "Player Attack") {
+			Destroy (other.gameObject);
+			Destroy (gameObject);
+		}
+	}
 }

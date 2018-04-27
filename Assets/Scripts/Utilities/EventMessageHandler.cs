@@ -29,9 +29,12 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 			}
 			break;
 		case "ParentsBedroom":
-			if (!GameManager.Instance.GSV.EnteredParentsRoom) {
+			if (!GameManager.Instance.GSV.EnteredParentsRoom && GameManager.Instance.GSV.GameState == 1) {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnEnterParentsRoom ());
 				GameManager.Instance.GSV.EnteredParentsRoom = true;
+			} else if (!GameManager.Instance.GSV.ReenteredParentsRoom && GameManager.Instance.GSV.GameState == 2) {
+				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnInspectParentsRoom ());
+				GameManager.Instance.GSV.ReenteredParentsRoom = true;
 			}
 			break;
 		case "MainRoad":
@@ -45,6 +48,7 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 		case "SleeperCar":
 			if (!GameManager.Instance.GSV.MetTheGang) {
 				GameManager.Instance.GSV.MetTheGang = true;
+				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_Naoki1 ());
 			}
 			break;
 		case "BattleSystem":
@@ -76,11 +80,21 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 		ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnAwake ());
 	}
 
+	public IEnumerator EnterBattle ()
+	{
+		yield return FadeManager.Instance.StartFadeAsync (false);
+		FadeManager.Instance.image.gameObject.SetActive (false);
+		GameManager.Instance.EnterBattle (SceneManager.GetActiveScene ().name);
+	}
+
 	public void CheckCustomEvents (string eventName)
 	{
 		switch (eventName) {
 		case "NaokiMeeting":
 			GameManager.Instance.GSV.TalkedToNaoki = true;
+			break;
+		case "BattleStart":
+			StartCoroutine (EnterBattle ());
 			break;
 		case "RoyDodgeDone":
 			GameManager.Instance.GSV.BattleTutorialStage = 2;

@@ -69,21 +69,4 @@ public class DialogueManager : MonoBehaviour
 			DialogueEventManager.Instance.diagEvent.Invoke (false);
 		}
 	}
-
-	IEnumerator WaitForInput ()
-	{
-		while (true) {
-			yield return WaitForKeyDown (KeyCode.Space);
-			DisplayNextSentence ();
-		}
-	}
-
-	IEnumerator WaitForKeyDown (KeyCode key)
-	{
-		do {
-			yield return null;
-		} while (!Input.GetKeyDown (key));
-	}
-
-
 }

@@ -41,14 +41,19 @@ public class PlayerHealth : MonoBehaviour
 
 	public void DecreaseCurrentHealth (int damage)
 	{
-		if (damaged == false) {
-			damaged = true;
-			playerHealth -= damage;
-			healthSlider.value = playerHealth;
+		if (GameManager.Instance.GSV.BattleTutorialStage == 0 || GameManager.Instance.GSV.BattleTutorialStage == 5) {
+			if (damaged == false) {
+				damaged = true;
+				playerHealth -= damage;
+				healthSlider.value = playerHealth;
 
-			if (playerHealth <= 0) {
-				BattleManager.Instance.BattleOver (false);
+				if (playerHealth <= 0) {
+					BattleManager.Instance.BattleOver (false);
+				}
 			}
+		} else {
+			damaged = true;
+			BattleManager.Instance.WrongMove ();
 		}
 	}
 }

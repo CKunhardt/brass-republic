@@ -23,7 +23,7 @@ public class PlayerProjectileSpawner : MonoBehaviour
 	void FixedUpdate ()
 	{        
 		if (GameManager.Instance.GSV.BattleTutorialStage == 0 || GameManager.Instance.GSV.BattleTutorialStage >= 3) {
-			if (Input.GetMouseButtonDown (0) && shooting == false) {
+			if (Input.GetMouseButtonDown (0) && shooting == false && !GameManager.Instance.inDialogue) {
 				shooting = true;
 				ShootPlayerProjectile (Player.transform.position.x);
 				shootingDelay = 0;
