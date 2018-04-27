@@ -328,6 +328,27 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114899227289957758, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Both of you can only move left and right, not up and down.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114135460127823916, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: '...you can dodge or punch back to block it.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114102598472679640, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Now you\u2019re ready to fight! Whoever hits the other five times first
+        wins!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114701792687512084, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Great job, newbie! Marley won't forget that anytime soon.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02b3f95b5e825f24eb5ee96e53f81fc7, type: 2}
   m_IsPrefabParent: 0

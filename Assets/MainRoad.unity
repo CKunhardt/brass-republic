@@ -497,7 +497,7 @@ MonoBehaviour:
     avatar: {fileID: 0}
     sentences:
     - (... oh my, I see.)
-    - (I just heard a knock. I think there're outside.)
+    - (I just heard a knock. I think they're outside.)
     - (OK, I won't answer...)
   nextDialogue: {fileID: 0}
 --- !u!1001 &643153613
