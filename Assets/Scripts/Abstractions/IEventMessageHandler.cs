@@ -10,4 +10,6 @@ public interface IEventMessageHandler : IEventSystemHandler
 	void CheckDialogueEvents (string targetName);
 
 	void CheckCustomEvents (string eventName);
+
+	IEnumerator EnterBattle ();
 }

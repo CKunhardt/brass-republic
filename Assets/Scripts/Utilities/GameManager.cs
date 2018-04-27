@@ -21,6 +21,7 @@ public class GameManager : Singleton<GameManager>
 			TalkedToN2,
 			CompletedTalkingToNeighbors,
 			ReenteredBedroom,
+			ReenteredParentsRoom,
 			TalkedToNaoki,
 			MetTheGang,
 			MovedLeft,
@@ -39,6 +40,7 @@ public class GameManager : Singleton<GameManager>
 			TalkedToN2 = false;
 			CompletedTalkingToNeighbors = false;
 			ReenteredBedroom = false;
+			ReenteredParentsRoom = false;
 			TalkedToNaoki = false;
 			MetTheGang = false;
 			MovedLeft = false;
@@ -49,29 +51,31 @@ public class GameManager : Singleton<GameManager>
 		}
 	}
 
-	public List<string> pauseLevels;
+	public List<string> pauseLevels { get; private set; }
 
-	private string _spawnerName;
-
-	public string spawnerName {
-		get { return this._spawnerName; }
-		set { _spawnerName = value; }
-	}
+	public string spawnerName { get; set; }
 
 	public string lastSceneName { get; set; }
 
 	public Vector2 pausePosition { get; set; }
 
-	public bool isPaused;
-	public bool firstLoad;
-	public bool comingFromBattle;
+	public bool isPaused { get; set; }
 
-	public Canvas uiCanvas;
+	public bool firstLoad { get; set; }
 
-	public GameStateVariables GSV;
-	public GameObject DMH;
-	public GameObject EMH;
-	public GameObject playerObject;
+	public bool comingFromBattle { get; set; }
+
+	public bool inDialogue { get; set; }
+
+	public Canvas uiCanvas { get; private set; }
+
+	public GameStateVariables GSV { get; private set; }
+
+	public GameObject DMH { get; private set; }
+
+	public GameObject EMH { get; private set; }
+
+	public GameObject playerObject { get; private set; }
 
 	void Awake ()
 	{
@@ -82,11 +86,14 @@ public class GameManager : Singleton<GameManager>
 		DMH = GameObject.Find ("UICanvas/DialogueSystem/DialogueMessageHandler");
 		EMH = GameObject.Find ("UICanvas/EventSystem/EventMessageHandler");
 		playerObject = GameObject.FindGameObjectWithTag ("Player");
+		uiCanvas = GameObject.Find ("UICanvas").GetComponent<Canvas> ();
 		isPaused = true;
 		firstLoad = true;
 		comingFromBattle = false;
+		inDialogue = false;
 		DialogueEventManager.Instance.player = playerObject.GetComponent<Entity> ();
 		StartCoroutine (WaitForInput (KeyCode.Escape));
+		// Remove eventually
 		StartCoroutine (WaitForInput (KeyCode.F1));
 	}
 
@@ -112,15 +119,17 @@ public class GameManager : Singleton<GameManager>
 		} else if (!pauseLevels.Contains (scene.name) && scene.name != "PlayerScene" && firstLoad) { // Game was paused since this was the first load.
 			Vector2 newPosition = GameObject.Find (spawnerName).transform.position;
 			playerObject.GetComponent<Player> ().SetPosition (newPosition);
-			firstLoad = false;
-			isPaused = false;
-			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
+			GUI.SetNextControlName ("ContinueButton");
+			StartCoroutine (FirstLoad (scene.name));
 		} else { // Loading a pause level
 			if (scene.name == "MainMenu" && comingFromBattle) {
 				playerObject.SetActive (true);
 				comingFromBattle = false;
 				Cursor.visible = true;
 				Cursor.lockState = CursorLockMode.None;
+			} else if (scene.name == "BattleSystem") {
+				playerObject.SetActive (false);
+				uiCanvas.GetComponent<Canvas> ().worldCamera = GameObject.Find ("BattleCamera").GetComponent<Camera> ();
 			}
 			ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (scene.name));
 		}
@@ -143,6 +152,14 @@ public class GameManager : Singleton<GameManager>
 		ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (sceneName));
 	}
 
+	IEnumerator FirstLoad (string sceneName)
+	{
+		yield return FadeManager.Instance.StartFadeAsync (true);
+		firstLoad = false;
+		isPaused = false;
+		ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => x.CheckSceneEvents (sceneName));
+	}
+
 	IEnumerator WaitForInput (KeyCode key)
 	{
 		while (true) {
@@ -156,8 +173,7 @@ public class GameManager : Singleton<GameManager>
 			} else if (key == KeyCode.F1) {
 				string sceneName = SceneManager.GetActiveScene ().name;
 				if (!comingFromBattle && !isPaused) {
-					PrepareForPause (sceneName);
-					SceneManager.LoadScene ("BattleSystem");
+					ExecuteEvents.Execute<IEventMessageHandler> (EMH, null, (x, y) => StartCoroutine (x.EnterBattle ()));
 				} else if (comingFromBattle) {
 					SceneManager.LoadScene (lastSceneName);
 				}
@@ -170,6 +186,12 @@ public class GameManager : Singleton<GameManager>
 		do {
 			yield return null;
 		} while (!Input.GetKeyDown (key));
+	}
+
+	public void EnterBattle (string sceneName)
+	{
+		PrepareForPause (sceneName);
+		SceneManager.LoadScene ("BattleSystem");
 	}
 
 	private void PrepareForPause (string sceneName)

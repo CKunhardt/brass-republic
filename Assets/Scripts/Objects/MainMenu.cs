@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 	{
 		GameManager.Instance.lastSceneName = "YourBedroom";
 		GameManager.Instance.spawnerName = "Spawner_Start";
+		FadeManager.Instance.image.gameObject.SetActive (true);
 		SceneManager.LoadScene (GameManager.Instance.lastSceneName);
 	}
 

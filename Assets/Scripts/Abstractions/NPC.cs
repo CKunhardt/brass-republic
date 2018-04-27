@@ -15,6 +15,8 @@ public class NPC : Entity
 	{
 		rb2D = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		anim.SetFloat ("input_x", 0f);
+		anim.SetFloat ("input_y", -1f);
 		framebuffer = 0;
 		horizontal = 0;
 		vertical = 0;
@@ -28,6 +30,8 @@ public class NPC : Entity
 	{
 		if (movementEnabled && isMoveable) {
 			handleMovement ();
+		} else {
+			fixFlying ();
 		}
 	}
 

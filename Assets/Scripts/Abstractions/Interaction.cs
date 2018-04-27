@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Interaction : MonoBehaviour, IInteractable {
+public abstract class Interaction : MonoBehaviour, IInteractable
+{
 
 	public bool hasInteraction;
 
@@ -13,7 +14,7 @@ public abstract class Interaction : MonoBehaviour, IInteractable {
 
 	protected void Start ()
 	{
-		uiCanvas = GameObject.Find("UICanvas").GetComponent<UICanvas>();
+		uiCanvas = GameObject.Find ("UICanvas").GetComponent<UICanvas> ();
 		interactionPrompt = uiCanvas.interactionPrompt;
 	}
 
@@ -22,8 +23,8 @@ public abstract class Interaction : MonoBehaviour, IInteractable {
 		if (other.tag == "Player" && hasInteraction) {
 			currentOther = other;
 			isInteractable = true;
-			interactionPrompt.SetActive(true);
-			StartCoroutine(WaitForInput());
+			interactionPrompt.SetActive (true);
+			StartCoroutine (WaitForInput ());
 		}
 	}
 
@@ -32,15 +33,15 @@ public abstract class Interaction : MonoBehaviour, IInteractable {
 		if (other.tag == "Player" && hasInteraction) {
 			currentOther = null;
 			isInteractable = false;
-			interactionPrompt.SetActive(false);
+			interactionPrompt.SetActive (false);
 		}
 	}
 
 	IEnumerator WaitForInput ()
 	{
 		while (isInteractable) {
-			yield return StartCoroutine(WaitForKeyDown());
-			Interact();
+			yield return StartCoroutine (WaitForKeyDown ());
+			Interact ();
 		}
 	}
 
@@ -48,9 +49,9 @@ public abstract class Interaction : MonoBehaviour, IInteractable {
 	{
 		do {
 			yield return null;
-		} while (!Input.GetKeyDown("space"));
+		} while (!Input.GetKeyDown (KeyCode.E));
 	}
 
-	public abstract void Interact();
+	public abstract void Interact ();
 
 }

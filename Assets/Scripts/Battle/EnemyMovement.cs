@@ -34,6 +34,7 @@ public class EnemyMovement : MonoBehaviour
 		attacking = false;
 
 		if (GameManager.Instance.GSV.BattleTutorialStage == 1) {
+			BattleManager.Instance.playerBattle.GetComponent<MouseMovement> ().movementEnabled = true;
 			ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_MarleyIntro ());
 		}
 	}

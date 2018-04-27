@@ -88,6 +88,11 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 		CallTriggerDay2 ("DM_Urchin3", "NaokiMeeting");
 	}
 
+	public void DialogueMessage_Naoki1 ()
+	{
+		CallTriggerDay2 ("DM_Naoki1", "BattleStart");
+	}
+
 	private void CallTriggerDay2 (string childName, string eventName = null)
 	{
 		transform.Find ("Day2/" + childName).GetComponent<DialogueTrigger> ().TriggerDialogue (dManage, eventName);
