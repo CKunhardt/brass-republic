@@ -7,35 +7,7 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 
 	public DialogueManager dManage;
 
-	public void DialogueMessage_OnAwakeInBedroom ()
-	{
-		CallTrigger ("DM_OnAwakeInBedroom");
-	}
-
-	public void DialogueMessage_OnEnterLivingRoom ()
-	{
-		CallTrigger ("DM_OnEnterLivingRoom");
-	}
-
-	public void DialogueMessage_OnEnterParentsRoom ()
-	{
-		CallTrigger ("DM_OnEnterParentsRoom");
-	}
-
-	public void DialogueMessage_OnEnterMainRoad ()
-	{
-		CallTrigger ("DM_OnEnterMainRoad");
-	}
-
-	public void DialogueMessage_OnCompleteTalkingToNeighbors ()
-	{
-		CallTrigger ("DM_OnCompleteTalkingToNeighbors");
-	}
-
-	public void DialogueMessage_OnReenterBedroom ()
-	{
-		CallTrigger ("DM_OnReenterBedroom");
-	}
+	// General Triggers
 
 	public void DialogueMessage_OnTriggerBed ()
 	{
@@ -46,6 +18,45 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 	{
 		transform.Find (childName).GetComponent<DialogueTrigger> ().TriggerDialogue (dManage, eventName);
 	}
+
+	// Day 1 Triggers
+
+	public void DialogueMessage_OnAwakeInBedroom ()
+	{
+		CallTriggerDay1 ("DM_OnAwakeInBedroom");
+	}
+
+	public void DialogueMessage_OnEnterLivingRoom ()
+	{
+		CallTriggerDay1 ("DM_OnEnterLivingRoom");
+	}
+
+	public void DialogueMessage_OnEnterParentsRoom ()
+	{
+		CallTriggerDay1 ("DM_OnEnterParentsRoom");
+	}
+
+	public void DialogueMessage_OnEnterMainRoad ()
+	{
+		CallTriggerDay1 ("DM_OnEnterMainRoad");
+	}
+
+	public void DialogueMessage_OnCompleteTalkingToNeighbors ()
+	{
+		CallTriggerDay1 ("DM_OnCompleteTalkingToNeighbors");
+	}
+
+	public void DialogueMessage_OnReenterBedroom ()
+	{
+		CallTriggerDay1 ("DM_OnReenterBedroom");
+	}
+
+	private void CallTriggerDay1 (string childName, string eventName = null)
+	{
+		transform.Find ("Day1/" + childName).GetComponent<DialogueTrigger> ().TriggerDialogue (dManage, eventName);
+	}
+
+	// Day 2 Triggers
 
 	// Battle Triggers
 

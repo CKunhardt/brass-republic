@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1297216913962976
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +566,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1996691875523034
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4454298568607738}
+  m_Layer: 0
+  m_Name: Day1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4011639854351250
 Transform:
   m_ObjectHideFlags: 1
@@ -573,10 +588,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1845211721064462}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.6555786, y: 5.1341553, z: -0.087208}
+  m_LocalPosition: {x: -4.655609, y: 5.13414, z: -0.087208}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4392331740233192}
+  m_Father: {fileID: 4454298568607738}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4087046671299904
@@ -624,11 +639,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1333474653502954}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4392331740233192}
+  m_Father: {fileID: 4454298568607738}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4165758284788850
@@ -668,7 +683,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4392331740233192}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4392331740233192
 Transform:
@@ -680,14 +695,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4011639854351250}
-  - {fileID: 4823051314808172}
-  - {fileID: 4704773972425464}
-  - {fileID: 4153649158695144}
-  - {fileID: 4556154970185992}
-  - {fileID: 4750653980244836}
   - {fileID: 4267308019177874}
   - {fileID: 4559875991540136}
+  - {fileID: 4454298568607738}
   m_Father: {fileID: 4512392849458200}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -703,6 +713,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4559875991540136}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4454298568607738
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1996691875523034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4011639854351250}
+  - {fileID: 4823051314808172}
+  - {fileID: 4704773972425464}
+  - {fileID: 4153649158695144}
+  - {fileID: 4556154970185992}
+  - {fileID: 4750653980244836}
+  m_Father: {fileID: 4392331740233192}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4492790992222578
 Transform:
@@ -751,11 +780,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1701121492191202}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4392331740233192}
+  m_Father: {fileID: 4454298568607738}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4559875991540136
@@ -779,7 +808,7 @@ Transform:
   - {fileID: 4165758284788850}
   - {fileID: 4411385875122302}
   m_Father: {fileID: 4392331740233192}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4593585747450848
 Transform:
@@ -826,11 +855,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1859060577099982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4392331740233192}
+  m_Father: {fileID: 4454298568607738}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4713862407777220
@@ -854,10 +883,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133133894850034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4392331740233192}
+  m_Father: {fileID: 4454298568607738}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4823051314808172
@@ -866,11 +895,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1323361537456242}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00004979223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4392331740233192}
+  m_Father: {fileID: 4454298568607738}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4945741419406598
@@ -988,7 +1017,7 @@ MonoBehaviour:
     sentences:
     - "You\u2019re almost ready!"
     - When your opponent throws a punch at you...
-    - '...you can dodge or punch back to cancel it.'
+    - '...you can dodge or punch back to block it.'
     - "Let\u2019s try it."
   nextDialogue: {fileID: 0}
 --- !u!114 &114152682130433964
@@ -1625,7 +1654,7 @@ MonoBehaviour:
     avatar: {fileID: 21300000, guid: 91183dbac9da6ab4980d3da933538e90, type: 3}
     sentences:
     - "OK, so you\u2019ll stay over here and your opponent will stay over there."
-    - Both of you can only move from left to right, not up and down.
+    - Both of you can only move left and right, not up and down.
     - Try it out -- move as far to each side as you can.
   nextDialogue: {fileID: 0}
 --- !u!114 &114905237810125456

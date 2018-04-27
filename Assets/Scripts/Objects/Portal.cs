@@ -18,6 +18,8 @@ public class Portal : MonoBehaviour
 			} else {
 				StartCoroutine (PrepareLoad ());
 			}
+		} else {
+			other.gameObject.SetActive (false);
 		}
 	}
 
