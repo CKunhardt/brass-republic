@@ -41,8 +41,8 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 			if (!GameManager.Instance.GSV.EnteredMainRoad) {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnEnterMainRoad ());
 				GameManager.Instance.GSV.EnteredMainRoad = true;
-			} else if (GameManager.Instance.GSV.GameState == 2 && !GameManager.Instance.GSV.TalkedToNaoki) {
-				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnInspectMainRoad ());
+            } else if (GameManager.Instance.GSV.GameState == 2 && !GameManager.Instance.GSV.TalkedToNaoki) {
+			    ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnInspectMainRoad ());
 			}
 			break;
 		case "SleeperCar":
@@ -58,20 +58,36 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 		}
 	}
 
-	public void CheckDialogueEvents (string targetName)
-	{
-		if (targetName == "Neighbor 1" && !GameManager.Instance.GSV.TalkedToN1) {
-			GameManager.Instance.GSV.TalkedToN1 = true;
-		} else if (targetName == "Neighbor 2" && !GameManager.Instance.GSV.TalkedToN2) {
-			GameManager.Instance.GSV.TalkedToN2 = true;
-		} else if (targetName == "YourBed") {
-			if (GameManager.Instance.GSV.ReenteredBedroom && GameManager.Instance.GSV.GameState == 1) {
-				StartCoroutine (GoToSleep ());
-			} else {
-				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerBed ());
-			}
-		}
-	}
+    public void CheckDialogueEvents(string targetName) {
+        if (targetName == "Neighbor 1") {
+            if (!GameManager.Instance.GSV.TalkedToN1) {
+                GameManager.Instance.GSV.TalkedToN1 = true;
+            }
+            //if (GameManager.Instance.GSV.GameState == 1) {
+                ExecuteEvents.Execute<IDialogueMessageHandler>(GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor1());
+            //} else if (GameManager.Instance.GSV.GameState == 2) { // TEST PURPOSES ONLY
+            //    ExecuteEvents.Execute<IDialogueMessageHandler>(GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor2());
+            //}
+
+        } else if (targetName == "Neighbor 2") {
+            if (!GameManager.Instance.GSV.TalkedToN2) {
+                GameManager.Instance.GSV.TalkedToN2 = true;
+            }
+            //if (GameManager.Instance.GSV.GameState == 1) {
+                ExecuteEvents.Execute<IDialogueMessageHandler>(GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor2());
+            //} else if (GameManager.Instance.GSV.GameState == 2) { // TEST PURPOSES ONLY
+            //    ExecuteEvents.Execute<IDialogueMessageHandler>(GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor1());
+            //}
+
+        } else if (targetName == "YourBed") {
+            if (GameManager.Instance.GSV.ReenteredBedroom && GameManager.Instance.GSV.GameState == 1) {
+                StartCoroutine(GoToSleep());
+            } else {
+                ExecuteEvents.Execute<IDialogueMessageHandler>(GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerBed());
+            }
+        }
+    }
+
 
 	private IEnumerator GoToSleep ()
 	{

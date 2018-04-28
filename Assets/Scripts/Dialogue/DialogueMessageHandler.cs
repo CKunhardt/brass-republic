@@ -14,10 +14,19 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 		CallTrigger ("DM_OnTriggerBed");
 	}
 
-	private void CallTrigger (string childName, string eventName = null)
+    public void DialogueMessage_OnTriggerNeighbor1() {
+        CallTrigger("DM_OnTriggerNeighbor1");
+    }
+
+    public void DialogueMessage_OnTriggerNeighbor2() {
+        CallTrigger("DM_OnTriggerNeighbor2");
+    }
+
+    private void CallTrigger (string childName, string eventName = null)
 	{
 		transform.Find (childName).GetComponent<DialogueTrigger> ().TriggerDialogue (dManage, eventName);
 	}
+
 
 	// Day 1 Triggers
 
@@ -41,7 +50,7 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 		CallTriggerDay1 ("DM_OnEnterMainRoad");
 	}
 
-	public void DialogueMessage_OnCompleteTalkingToNeighbors ()
+    public void DialogueMessage_OnCompleteTalkingToNeighbors ()
 	{
 		CallTriggerDay1 ("DM_OnCompleteTalkingToNeighbors");
 	}

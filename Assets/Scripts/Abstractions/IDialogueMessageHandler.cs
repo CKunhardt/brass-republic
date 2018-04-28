@@ -22,13 +22,18 @@ public interface IDialogueMessageHandler : IEventSystemHandler
 
 	void DialogueMessage_OnEnterMainRoad ();
 
-	void DialogueMessage_OnCompleteTalkingToNeighbors ();
+    void DialogueMessage_OnTriggerNeighbor1();
+
+    void DialogueMessage_OnTriggerNeighbor2();
+
+    void DialogueMessage_OnCompleteTalkingToNeighbors ();
 
 	void DialogueMessage_OnReenterBedroom ();
 
-	// Day 2 Triggers
 
-	void DialogueMessage_PreventEarlyProceed ();
+    // Day 2 Triggers
+
+    void DialogueMessage_PreventEarlyProceed ();
 
 	void DialogueMessage_OnAwake ();
 
