@@ -31,7 +31,6 @@ public class Naoki : NPC
 	{
 		if (GameManager.Instance.GSV.TalkedToNaoki) {
 			if (SceneManager.GetActiveScene ().name == "MainRoad") {
-				GameManager.Instance.playerObject.GetComponent<Entity> ().setMovementEnabled (false);
 				FirstWalk ();
 			} else if (SceneManager.GetActiveScene ().name == "EngineCar") {
 				if (walkSegment == 1)
@@ -61,7 +60,6 @@ public class Naoki : NPC
 		float fracJourney = distCovered / journeyLength;
 		transform.position = Vector2.Lerp (startPosition, destination, fracJourney);
 		if (fracJourney > .95f) {
-			GameManager.Instance.playerObject.GetComponent<Entity> ().setMovementEnabled (true);
 			walkSegment++;
 			startedMoving = false;
 			anim.SetBool ("isWalking", false);
