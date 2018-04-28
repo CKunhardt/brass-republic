@@ -562,6 +562,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114151735451956038, guid: eb13b626674504a41833055dc02a8f86,
+        type: 2}
+      propertyPath: dialogue.avatar
+      value: 
+      objectReference: {fileID: 21300000, guid: e62c5318dfcd9fe438854c92baf1effc,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb13b626674504a41833055dc02a8f86, type: 2}
   m_IsPrefabParent: 0
