@@ -17,7 +17,7 @@ public class DialogueInteraction : Interaction, IInteractable
 
 	public override void Interact ()
 	{
-		if (target.tag == "NPC" && isInteractable == true) {
+		if (isInteractable == true) {
 			DialogueTrigger dTrig = target.GetComponent<DialogueTrigger> ();
 			Entity targetEntity = target.GetComponent<NPC> ();
 			Entity playerEntity = currentOther.GetComponentInParent<Player> ();

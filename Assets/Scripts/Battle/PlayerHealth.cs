@@ -54,6 +54,9 @@ public class PlayerHealth : MonoBehaviour
 		} else {
 			damaged = true;
 			BattleManager.Instance.WrongMove ();
+			if (GameManager.Instance.GSV.BattleTutorialStage == 2) {
+				BattleManager.Instance.enemyBattle.GetComponent<EnemyMovement> ().attacking = true;
+			}
 		}
 	}
 }

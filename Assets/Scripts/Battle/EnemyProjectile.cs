@@ -43,7 +43,7 @@ public class EnemyProjectile : Projectile
 
 	new protected void OnBecameInvisible ()
 	{
-		if (GameManager.Instance.GSV.BattleTutorialStage == 2) {
+		if (GameManager.Instance.GSV.BattleTutorialStage == 2 && !playerHealth.damaged) {
 			BattleManager.Instance.ProgressBattle ();
 		}
 		base.OnBecameInvisible ();
