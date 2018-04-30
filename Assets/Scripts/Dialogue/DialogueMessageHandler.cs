@@ -14,15 +14,12 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 		CallTrigger ("DM_OnTriggerBed");
 	}
 
-    public void DialogueMessage_OnTriggerNeighbor1() {
-        CallTrigger("DM_OnTriggerNeighbor1");
-    }
+	public void DialogueMessage_NeighborSilence ()
+	{
+		CallTrigger ("DM_NeighborSilence");
+	}
 
-    public void DialogueMessage_OnTriggerNeighbor2() {
-        CallTrigger("DM_OnTriggerNeighbor2");
-    }
-
-    private void CallTrigger (string childName, string eventName = null)
+	private void CallTrigger (string childName, string eventName = null)
 	{
 		transform.Find (childName).GetComponent<DialogueTrigger> ().TriggerDialogue (dManage, eventName);
 	}
@@ -45,18 +42,27 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 		CallTriggerDay1 ("DM_OnEnterParentsRoom");
 	}
 
-    public void DialogueMessage_OnEventParentsBed ()
-    {
-        CallTriggerDay1("DM_OnEventParentsBed");
-    }
+	public void DialogueMessage_OnEventParentsBed ()
+	{
+		CallTriggerDay1 ("DM_OnEventParentsBed");
+	}
 
-
-    public void DialogueMessage_OnEnterMainRoad ()
+	public void DialogueMessage_OnEnterMainRoad ()
 	{
 		CallTriggerDay1 ("DM_OnEnterMainRoad");
 	}
 
-    public void DialogueMessage_OnCompleteTalkingToNeighbors ()
+	public void DialogueMessage_OnTriggerNeighbor1 ()
+	{
+		CallTriggerDay1 ("DM_OnTriggerNeighbor1");
+	}
+
+	public void DialogueMessage_OnTriggerNeighbor2 ()
+	{
+		CallTriggerDay1 ("DM_OnTriggerNeighbor2");
+	}
+
+	public void DialogueMessage_OnCompleteTalkingToNeighbors ()
 	{
 		CallTriggerDay1 ("DM_OnCompleteTalkingToNeighbors");
 	}

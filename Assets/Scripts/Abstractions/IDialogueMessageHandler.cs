@@ -12,6 +12,8 @@ public interface IDialogueMessageHandler : IEventSystemHandler
 
 	void DialogueMessage_OnTriggerBed ();
 
+	void DialogueMessage_NeighborSilence ();
+
 	// Day 1 Triggers
 
 	void DialogueMessage_OnAwakeInBedroom ();
@@ -20,22 +22,22 @@ public interface IDialogueMessageHandler : IEventSystemHandler
 
 	void DialogueMessage_OnEnterParentsRoom ();
 
-    void DialogueMessage_OnEventParentsBed();
+	void DialogueMessage_OnEventParentsBed ();
 
-    void DialogueMessage_OnEnterMainRoad ();
+	void DialogueMessage_OnEnterMainRoad ();
 
-    void DialogueMessage_OnTriggerNeighbor1();
+	void DialogueMessage_OnTriggerNeighbor1 ();
 
-    void DialogueMessage_OnTriggerNeighbor2();
+	void DialogueMessage_OnTriggerNeighbor2 ();
 
-    void DialogueMessage_OnCompleteTalkingToNeighbors ();
+	void DialogueMessage_OnCompleteTalkingToNeighbors ();
 
 	void DialogueMessage_OnReenterBedroom ();
 
 
-    // Day 2 Triggers
+	// Day 2 Triggers
 
-    void DialogueMessage_PreventEarlyProceed ();
+	void DialogueMessage_PreventEarlyProceed ();
 
 	void DialogueMessage_OnAwake ();
 
