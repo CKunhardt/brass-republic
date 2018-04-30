@@ -61,15 +61,18 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 			if (!GameManager.Instance.GSV.TalkedToN1) {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor1 ());
 				GameManager.Instance.GSV.TalkedToN1 = true;
+                Debug.Log("I hope not");
 			} else {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_NeighborSilence ());
 			}
 
 		} else if (targetName == "Neighbor 2") {
-			if (!GameManager.Instance.GSV.TalkedToN2) {
+            Debug.Log("um" + GameManager.Instance.GSV.TalkedToN2);
+			if (GameManager.Instance.GSV.GameState == 1 || !GameManager.Instance.GSV.TalkedToN2) {
 				GameManager.Instance.GSV.TalkedToN2 = true;
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor2 ());
-			} else {
+                Debug.Log("NOPE");
+            } else {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_NeighborSilence ());
 			}
 

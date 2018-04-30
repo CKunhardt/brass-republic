@@ -298,6 +298,11 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 994443131}
+    - target: {fileID: 114430336753482616, guid: 02b3f95b5e825f24eb5ee96e53f81fc7,
+        type: 2}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: '... where are you...?'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 02b3f95b5e825f24eb5ee96e53f81fc7, type: 2}
   m_IsPrefabParent: 0
