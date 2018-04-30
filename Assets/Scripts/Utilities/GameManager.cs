@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
 		public bool AwokeInRoom,
 			EnteredLivingRoom,
 			EnteredParentsRoom,
+            TriggeredParentsEvent,
 			EnteredMainRoad,
 			TalkedToN1,
 			TalkedToN2,
@@ -35,6 +36,7 @@ public class GameManager : Singleton<GameManager>
 			AwokeInRoom = false;
 			EnteredLivingRoom = false;
 			EnteredParentsRoom = false;
+            TriggeredParentsEvent = false;
 			EnteredMainRoad = false;
 			TalkedToN1 = false;
 			TalkedToN2 = false;

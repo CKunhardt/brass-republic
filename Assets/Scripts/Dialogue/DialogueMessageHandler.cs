@@ -45,7 +45,13 @@ public class DialogueMessageHandler : MonoBehaviour, IDialogueMessageHandler
 		CallTriggerDay1 ("DM_OnEnterParentsRoom");
 	}
 
-	public void DialogueMessage_OnEnterMainRoad ()
+    public void DialogueMessage_OnEventParentsBed ()
+    {
+        CallTriggerDay1("DM_OnEventParentsBed");
+    }
+
+
+    public void DialogueMessage_OnEnterMainRoad ()
 	{
 		CallTriggerDay1 ("DM_OnEnterMainRoad");
 	}

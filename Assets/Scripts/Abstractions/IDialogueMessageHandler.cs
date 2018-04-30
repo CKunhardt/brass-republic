@@ -20,7 +20,9 @@ public interface IDialogueMessageHandler : IEventSystemHandler
 
 	void DialogueMessage_OnEnterParentsRoom ();
 
-	void DialogueMessage_OnEnterMainRoad ();
+    void DialogueMessage_OnEventParentsBed();
+
+    void DialogueMessage_OnEnterMainRoad ();
 
     void DialogueMessage_OnTriggerNeighbor1();
 
