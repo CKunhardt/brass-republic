@@ -59,7 +59,7 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 	{
 		if (targetName == "Neighbor 1") {
 			if (!GameManager.Instance.GSV.TalkedToN1) {
-				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor1 ());
+				//ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor1 ());
 				GameManager.Instance.GSV.TalkedToN1 = true;
 			} else {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_NeighborSilence ());
@@ -67,9 +67,8 @@ public class EventMessageHandler : MonoBehaviour, IEventMessageHandler
 
 		} else if (targetName == "Neighbor 2") {
 			if (!GameManager.Instance.GSV.TalkedToN2) {
-				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor2 ());
+				//ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_OnTriggerNeighbor2 ());
 				GameManager.Instance.GSV.TalkedToN2 = true;
-				Debug.Log ("Got here");
 			} else {
 				ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_NeighborSilence ());
 			}
