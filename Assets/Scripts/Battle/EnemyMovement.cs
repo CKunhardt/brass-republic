@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//controls enemy's random movement and attacking
 public class EnemyMovement : MonoBehaviour
 {
-
 	public float leftXBound;
 	public float rightXBound;
 	public float initialSpeed;
@@ -26,7 +26,6 @@ public class EnemyMovement : MonoBehaviour
 
 	public EnemyProjectileSpawner enemyProjectileSpawner;
 
-	// Use this for initialization
 	void Start ()
 	{
 		lastPosition = transform.position;
@@ -39,10 +38,8 @@ public class EnemyMovement : MonoBehaviour
 		}
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate ()
-	{
-		//unfinished
+    { 
 		if (movementEnabled) {
 			switch (GameManager.Instance.GSV.BattleTutorialStage) {
 			case 1: // RoyMove event
@@ -69,6 +66,7 @@ public class EnemyMovement : MonoBehaviour
 
 	void Move ()
 	{
+        //if reached destination, determine a new one and shoot
 		if (transform.position == lastPosition) {
 			startTime = Time.time;
 			moveDestination = new Vector3 (((rightXBound - leftXBound) * Random.value) - 5, 0, this.transform.position.z);
@@ -78,10 +76,12 @@ public class EnemyMovement : MonoBehaviour
 
 			if (attacking) {
 				enemyProjectileSpawner.Attack (transform.position);
+                if (speed < 6)
 				speed += 0.1f;
 			}
 		}
 
+        //move towards destination
 		lastPosition = transform.position;
 		float distCovered = (Time.time - startTime) * speed + startPush;
 		float fracJourney = distCovered / journeyLength;

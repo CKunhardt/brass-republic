@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//controls enemy taking damage
 public class EnemyHealth : MonoBehaviour
 {
-
 	public int enemyHealth;
 	SpriteRenderer spriteRend;
 	private bool damaged;
@@ -13,19 +13,17 @@ public class EnemyHealth : MonoBehaviour
 	float totalDamageFlash = 20;
 	Color normalColor;
 
-	// Use this for initialization
 	void Start ()
 	{
 		spriteRend = GetComponent<SpriteRenderer> ();
 		damaged = false;
 		damageFlash = 0;
 		normalColor = spriteRend.color;
-
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate ()
 	{
+        //enemy flashes red when they're hit
 		if (damaged == true) {
 			if (damageFlash < totalDamageFlash) {
 				spriteRend.color = Color.red;
@@ -38,7 +36,7 @@ public class EnemyHealth : MonoBehaviour
 		}
 	}
 
-
+    //take damage and/or progress stage
 	public void DecreaseCurrentHealth (int damage)
 	{
 		if (GameManager.Instance.GSV.BattleTutorialStage == 0 || GameManager.Instance.GSV.BattleTutorialStage == 5)

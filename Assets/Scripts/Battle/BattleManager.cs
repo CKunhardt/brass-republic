@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//controls the stage of battle and dialogue
 public class BattleManager : Singleton<BattleManager>
 {
 	public GameObject playerBattle;
