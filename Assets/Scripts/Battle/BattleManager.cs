@@ -25,6 +25,7 @@ public class BattleManager : Singleton<BattleManager>
 
 	public void ProgressBattle ()
 	{
+		DeleteAllProjectiles ();
 		switch (GameManager.Instance.GSV.BattleTutorialStage) {
 		case 1:
 			ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_RoyDodge ());
@@ -43,6 +44,22 @@ public class BattleManager : Singleton<BattleManager>
 
 	public void WrongMove ()
 	{
+		DeleteAllProjectiles ();
 		ExecuteEvents.Execute<IDialogueMessageHandler> (GameManager.Instance.DMH, null, (x, y) => x.DialogueMessage_RoyWrong ());
 	}
+
+	private void DeleteAllProjectiles ()
+	{
+		GameObject[] enemyAttacks = GameObject.FindGameObjectsWithTag ("Enemy Attack");
+		GameObject[] playerAttacks = GameObject.FindGameObjectsWithTag ("Player Attack");
+
+		foreach (GameObject enemyAttack in enemyAttacks) {
+			Destroy (enemyAttack);
+		}
+
+		foreach (GameObject playerAttack in playerAttacks) {
+			Destroy (playerAttack);
+		}
+	}
+
 }

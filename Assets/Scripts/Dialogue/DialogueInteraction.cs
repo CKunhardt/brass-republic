@@ -27,7 +27,7 @@ public class DialogueInteraction : Interaction, IInteractable
 
 			ExecuteEvents.Execute<IEventMessageHandler> (GameManager.Instance.EMH, null, (x, y) => x.CheckDialogueEvents (target.name));
 		
-			dTrig.TriggerDialogue (dManager);
+			//dTrig.TriggerDialogue (dManager);
 		}
 	}
 }
