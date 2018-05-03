@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//controls projectiles sent by the player
 public class PlayerProjectile : Projectile
 {
 	EnemyHealth enemyHealth;
-	int count;
 
-	// Use this for initialization
 	new void Start ()
 	{
 		base.Start ();

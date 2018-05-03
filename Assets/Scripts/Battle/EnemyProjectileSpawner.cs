@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//spawns enemy projectiles at the enemy's location
 public class EnemyProjectileSpawner : MonoBehaviour
 {
 
@@ -15,6 +16,6 @@ public class EnemyProjectileSpawner : MonoBehaviour
 
 	public void Attack (Vector3 enemyPos)
 	{
-		Instantiate (projectilePrefab, enemyPos, new Quaternion (0, 0, 0, 0)); // Spawn a projectile
+		Instantiate (projectilePrefab, enemyPos, new Quaternion (0, 0, 0, 0)); // spawn a projectile
 	}
 }

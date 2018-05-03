@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//controls projectiles sent from enemy
 public class EnemyProjectile : Projectile
 {
 	PlayerHealth playerHealth;
 	Vector3 playerPos;
 
-	// Use this for initialization
 	new void Start ()
 	{
 		base.Start ();
@@ -17,22 +17,16 @@ public class EnemyProjectile : Projectile
 		rb.AddForce ((playerPos.x - rb.transform.position.x), 0, -speed, ForceMode.VelocityChange);
 	}
 
-	void FixedUpdate ()
-	{
-		
-	}
-
 	void OnTriggerEnter (Collider other)
 	{
-		//Debug.Log("triggered");
+        //if collides with player, player takes damage and projectile destroys
 		if (other.gameObject.tag == "Player") {
-			//Debug.Log("hit player");
 			playerHealth.DecreaseCurrentHealth (1);
 			Destroy (gameObject);
 		}
 
+        //if collides with a player attack, destroy both projectiles
 		if (other.gameObject.tag == "Player Attack") {
-			//Debug.Log("hit attack");
 			if (GameManager.Instance.GSV.BattleTutorialStage == 4) {
 				BattleManager.Instance.ProgressBattle ();
 			}

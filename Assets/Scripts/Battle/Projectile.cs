@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//parent class for EnemyProjectile and PlayerProjectile
 public abstract class Projectile : MonoBehaviour
 {
 	protected GameObject player;
@@ -15,6 +16,7 @@ public abstract class Projectile : MonoBehaviour
 		rb = gameObject.GetComponent<Rigidbody> ();
 	}
 
+    //when projectile goes offscreen
 	protected void OnBecameInvisible ()
 	{
 		Destroy (gameObject);

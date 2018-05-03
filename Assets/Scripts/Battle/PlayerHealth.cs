@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//controls player taking damage
 public class PlayerHealth : MonoBehaviour
 {
 	public Rigidbody rb;
@@ -15,7 +16,6 @@ public class PlayerHealth : MonoBehaviour
 	float totalDamageFlash = 20;
 	Color normalColor;
 
-	// Use this for initialization
 	void Start ()
 	{
 		spriteRend = GetComponent<SpriteRenderer> ();
@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
 		normalColor = spriteRend.color;
 	}
 
+    //if player took damage recently, flash red
 	private void FixedUpdate ()
 	{
 		if (damaged == true) {
@@ -39,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
+    //if player isn't invulnerable, decrease health and make them invulnerable
 	public void DecreaseCurrentHealth (int damage)
 	{
 		if (GameManager.Instance.GSV.BattleTutorialStage == 0 || GameManager.Instance.GSV.BattleTutorialStage == 5) {
@@ -51,6 +53,7 @@ public class PlayerHealth : MonoBehaviour
 					BattleManager.Instance.BattleOver (false);
 				}
 			}
+
 		} else {
 			damaged = true;
 			BattleManager.Instance.WrongMove ();
