@@ -12,7 +12,7 @@ Simply download the corresponding zip file for your platform! Included are Windo
 
 ## Contributing
 
-See [CONTRIBUTING.md](../blob/master/CONTRIBUTING.md)
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ### Attributions
 
